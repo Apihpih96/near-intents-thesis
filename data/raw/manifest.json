@@ -1,0 +1,98 @@
+{
+  "fetched_at_utc": "2026-11-01T00:17:47+00:00",
+  "sources": {
+    "intents_volume": {
+      "file": "data/raw/intents_volume.json",
+      "urls": [
+        "https://api.llama.fi/summary/dexs/near-intents"
+      ],
+      "provider": "DefiLlama",
+      "what": "NEAR Intents daily swap volume (USD)",
+      "http_status": [
+        200
+      ],
+      "sha256": "b019510e1d048784a3a7b99dd446cb50d0c4ad2b2f5424a34466f4f64f8dd546",
+      "bytes": 49698
+    },
+    "intents_fees": {
+      "file": "data/raw/intents_fees.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/near-intents?dataType=dailyFees"
+      ],
+      "provider": "DefiLlama",
+      "what": "NEAR Intents gross daily fees: protocol + affiliate fees (USD)",
+      "http_status": [
+        200
+      ],
+      "sha256": "83acb532aa98055f60cf46e9f2461d00b162bcbd7c24292fe6b84d2a3b2ac638",
+      "bytes": 38259
+    },
+    "intents_revenue": {
+      "file": "data/raw/intents_revenue.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/near-intents?dataType=dailyRevenue"
+      ],
+      "provider": "DefiLlama",
+      "what": "NEAR's net captured Intents revenue, swept into NEAR revenue wallets (USD)",
+      "http_status": [
+        200
+      ],
+      "sha256": "679b3a0e6d2b3a86e7d731b7ccda39ea02c5891ecc96d2a701488a2eced1ea19",
+      "bytes": 35859
+    },
+    "intents_holders_revenue": {
+      "file": "data/raw/intents_holders_revenue.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/near-intents?dataType=dailyHoldersRevenue"
+      ],
+      "provider": "DefiLlama",
+      "what": "Captured revenue used to buy back $NEAR on the open market since 2026-02-23 (USD)",
+      "http_status": [
+        200
+      ],
+      "sha256": "3fb2eca54e64097d6e6fcf460125a5c52115ff7c6ee0194e1e8f51f05b06045c",
+      "bytes": 35657
+    },
+    "near_price": {
+      "file": "data/raw/near_price.json",
+      "urls": [
+        "https://coins.llama.fi/chart/coingecko:near?start=1733011200&span=500&period=1d",
+        "https://coins.llama.fi/chart/coingecko:near?start=1776211200&span=500&period=1d"
+      ],
+      "provider": "DefiLlama coins (CoinGecko id 'near')",
+      "what": "NEAR daily price (USD)",
+      "http_status": [
+        200,
+        200
+      ],
+      "sha256": "86425668437b0115d133b31c24d624b5654a3bbd2c6f54e855274d4d9a4045e9",
+      "bytes": 32564
+    },
+    "nearblocks_stats": {
+      "file": "data/raw/nearblocks_stats.json",
+      "urls": [
+        "https://api.nearblocks.io/v1/stats"
+      ],
+      "provider": "NearBlocks",
+      "what": "Current NEAR supply, market cap, price, total transactions",
+      "http_status": [
+        200
+      ],
+      "sha256": "e7f9df0a88720d757af3b3fe8426820ce5957535a141bbc7139be3db8566e986",
+      "bytes": 479
+    },
+    "near_chain_tvl": {
+      "file": "data/raw/near_chain_tvl.json",
+      "urls": [
+        "https://api.llama.fi/v2/historicalChainTvl/Near"
+      ],
+      "provider": "DefiLlama",
+      "what": "Total value locked on the NEAR chain, daily (USD)",
+      "http_status": [
+        200
+      ],
+      "sha256": "13cc41deb1759a249cff1f08f6251fdd516d7159678dbd92f6b331d56a971100",
+      "bytes": 67600
+    }
+  }
+}

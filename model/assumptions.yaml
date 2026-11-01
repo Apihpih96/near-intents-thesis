@@ -1,0 +1,31 @@
+# Bear / base / bull value-capture model for NEAR Intents -> $NEAR.
+# Edit these numbers and re-run `python -m pipeline model` (or edit them live on the dashboard).
+#
+# Baseline comes from the data (metrics.json), never typed in here:
+#   annual_volume  = last 30 days of Intents volume x 365/30
+#   take_rate      = NEAR captured revenue / volume over the last 90 days
+#   buyback_share  = buyback (holders revenue) / captured revenue over the last 90 days
+#
+# Scenario knobs (one-year forward):
+#   volume_growth        change in annual Intents volume vs. the 30-day run-rate (0.25 = +25%)
+#   take_rate_multiplier scales the observed take rate (fee cuts < 1, fee hikes / more 1Click share > 1)
+#   buyback_share        fraction of captured revenue that buys $NEAR; "observed" = use the data
+#   multiple             USD of NEAR market value the market assigns per USD of annual buyback
+#                        (like a P/E on the cash flow that reaches holders)
+
+scenarios:
+  bear:
+    volume_growth: -0.50
+    take_rate_multiplier: 0.75
+    buyback_share: 0.50      # e.g. part of revenue redirected away from buybacks
+    multiple: 10
+  base:
+    volume_growth: 0.25
+    take_rate_multiplier: 1.0
+    buyback_share: observed
+    multiple: 20
+  bull:
+    volume_growth: 2.00
+    take_rate_multiplier: 1.25
+    buyback_share: 1.0
+    multiple: 35

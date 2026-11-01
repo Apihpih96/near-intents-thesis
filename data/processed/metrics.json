@@ -1,0 +1,1284 @@
+{
+ "as_of_last_full_day": "2026-10-30",
+ "fetched_at_utc": "2026-11-01T00:17:47+00:00",
+ "current": {
+  "near_price_usd": 4.42,
+  "market_cap_usd": 5787278866.0,
+  "total_supply_near": 1310472965.2041724,
+  "circulating_supply_near": 1249836992.159308,
+  "total_txns": 5472400164,
+  "tps": 14,
+  "nodes_online": 412,
+  "volume_24h_usd": 497222574.0,
+  "change_24h_pct": 2.49203
+ },
+ "windows": {
+  "7d": {
+   "volume": 896884840.0,
+   "fees": 1052898.0,
+   "revenue": 494955.0,
+   "holders_revenue": 494955.0
+  },
+  "30d": {
+   "volume": 3912208310.0,
+   "fees": 5943882.0,
+   "revenue": 2145016.0,
+   "holders_revenue": 2145016.0
+  },
+  "90d": {
+   "volume": 11436736957.0,
+   "fees": 17037689.0,
+   "revenue": 4694215.0,
+   "holders_revenue": 4694215.0
+  },
+  "365d": {
+   "volume": 32886471981.0,
+   "fees": 53841064.0,
+   "revenue": 9240987.05,
+   "holders_revenue": 7470792.05
+  },
+  "all_time": {
+   "volume": 35937989593.0,
+   "fees": 57652065.98,
+   "revenue": 9241023.05,
+   "holders_revenue": 7470792.05
+  }
+ },
+ "take_rates": {
+  "7d": {
+   "fees_per_volume": 0.0011739500469201821,
+   "revenue_per_volume": 0.0005518601473964037,
+   "revenue_per_fees": 0.4700882706586963,
+   "buyback_per_revenue": 1.0
+  },
+  "30d": {
+   "fees_per_volume": 0.0015193163372223398,
+   "revenue_per_volume": 0.0005482877776515944,
+   "revenue_per_fees": 0.36087795820980295,
+   "buyback_per_revenue": 1.0
+  },
+  "90d": {
+   "fees_per_volume": 0.0014897333972144797,
+   "revenue_per_volume": 0.00041045055225536565,
+   "revenue_per_fees": 0.27551946745829203,
+   "buyback_per_revenue": 1.0
+  },
+  "365d": {
+   "fees_per_volume": 0.00163717968990734,
+   "revenue_per_volume": 0.00028099660721706286,
+   "revenue_per_fees": 0.17163455480746073,
+   "buyback_per_revenue": 0.808440917574925
+  },
+  "all_time": {
+   "fees_per_volume": 0.0016042095463022078,
+   "revenue_per_volume": 0.00025713800784782814,
+   "revenue_per_fees": 0.160289538508573,
+   "buyback_per_revenue": 0.8084377681538192
+  }
+ },
+ "value_capture": {
+  "market_cap_usd": 5787278866.0,
+  "circulating_supply_near": 1249836992.159308,
+  "annualized_volume_usd_from_30d": 47598534438.333336,
+  "annualized_fees_usd_from_30d": 72317231.0,
+  "annualized_revenue_usd_from_30d": 26097694.666666668,
+  "annualized_buyback_usd_from_30d": 26097694.666666668,
+  "buyback_yield_on_mcap": 0.004509493195496321,
+  "price_to_annualized_revenue": 221.75440934220958,
+  "annualized_volume_per_usd_mcap": 8.224683057519927,
+  "buyback_since": "2026-02-23",
+  "buyback_usd_since_start": 7470792.05,
+  "approx_near_bought_since_start": 2920278.170412766,
+  "approx_near_bought_pct_circulating": 0.0023365272341375368,
+  "note": "approx_near_bought assumes each day's buyback USD was spent at that day's price; DefiLlama reports USD, not tokens."
+ },
+ "relations": {
+  "volume_vs_price": {
+   "weekly_logchange_corr": 0.03613018601466189,
+   "n_weeks": 96,
+   "lagged_corr": {
+    "-4": -0.18171300084326925,
+    "-3": 0.017206028017839926,
+    "-2": 0.03008777515698835,
+    "-1": 0.03515897917028915,
+    "0": 0.03613018601466189,
+    "1": 0.0002330401749909212,
+    "2": -0.13579685642752976,
+    "3": 0.012635418351152762,
+    "4": 0.030879874841857186
+   },
+   "regression_price_on_flow": {
+    "slope": 0.011278185123601594,
+    "intercept": -0.0019061313568492333,
+    "r": 0.03613018601466189,
+    "r2": 0.0013053903414540697,
+    "n": 96,
+    "t_stat": 0.350524010016837
+   },
+   "log_level_corr_SPURIOUS_RISK": -0.5531365763389029
+  },
+  "revenue_vs_price": {
+   "weekly_logchange_corr": 0.16089887894805482,
+   "n_weeks": 45,
+   "lagged_corr": {
+    "-4": -0.14554074416937662,
+    "-3": 0.02700024478607296,
+    "-2": 0.2114838012492394,
+    "-1": -0.06435304199090287,
+    "0": 0.16089887894805482,
+    "1": -0.15753374380525909,
+    "2": -0.15149990522755427,
+    "3": -0.07853053598168834,
+    "4": 0.0029145636104580034
+   },
+   "regression_price_on_flow": {
+    "slope": 0.01290129248478829,
+    "intercept": 0.007654019935027158,
+    "r": 0.16089887894805482,
+    "r2": 0.0258884492467408,
+    "n": 45,
+    "t_stat": 1.0690127854387144
+   },
+   "log_level_corr_SPURIOUS_RISK": 0.13040844342669786
+  },
+  "volume_vs_price_pre_buyback": {
+   "weekly_logchange_corr": -0.027667237240431863,
+   "n_weeks": 61,
+   "lagged_corr": {
+    "-4": -0.1661489727366078,
+    "-3": 0.12381770865264749,
+    "-2": 0.05192379585485437,
+    "-1": 0.09549960400184615,
+    "0": -0.027667237240431863,
+    "1": 0.06742033787683775,
+    "2": -0.2313531887829403,
+    "3": 0.0687237541562741,
+    "4": 0.09015045868432452
+   },
+   "regression_price_on_flow": {
+    "slope": -0.00663143726090812,
+    "intercept": -0.024842616506752055,
+    "r": -0.027667237240431863,
+    "r2": 0.0007654760165183397,
+    "n": 61,
+    "t_stat": -0.2125974663929556
+   },
+   "log_level_corr_SPURIOUS_RISK": -0.7777772707948204
+  },
+  "volume_vs_price_post_buyback": {
+   "weekly_logchange_corr": 0.41196277298159145,
+   "n_weeks": 34,
+   "lagged_corr": {
+    "-4": -0.22058035987235625,
+    "-3": -0.24957917181953648,
+    "-2": 0.1311176923128548,
+    "-1": -0.04237950176165009,
+    "0": 0.41196277298159145,
+    "1": -0.09087267726117068,
+    "2": 0.3175108202986731,
+    "3": 0.018108459072969308,
+    "4": 0.011146490807549892
+   },
+   "regression_price_on_flow": {
+    "slope": 0.3002688170650587,
+    "intercept": 0.035837644695073965,
+    "r": 0.41196277298159145,
+    "r2": 0.16971332632268227,
+    "n": 34,
+    "t_stat": 2.5575193499301956
+   },
+   "log_level_corr_SPURIOUS_RISK": 0.7900655896602654
+  }
+ },
+ "weekly": [
+  {
+   "week": "2024-12-16",
+   "volume": 1021001.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 5.01,
+   "tvl": 239430852.0
+  },
+  {
+   "week": "2024-12-23",
+   "volume": 872180.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 5.12,
+   "tvl": 247776716.0
+  },
+  {
+   "week": "2024-12-30",
+   "volume": 687690.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 5.79,
+   "tvl": 275030806.0
+  },
+  {
+   "week": "2025-01-06",
+   "volume": 561882.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 5.08,
+   "tvl": 244168110.0
+  },
+  {
+   "week": "2025-01-13",
+   "volume": 1600401.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 5.45,
+   "tvl": 254070574.0
+  },
+  {
+   "week": "2025-01-20",
+   "volume": 3290477.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 4.93,
+   "tvl": 243262200.0
+  },
+  {
+   "week": "2025-01-27",
+   "volume": 826803.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 3.74,
+   "tvl": 218062323.0
+  },
+  {
+   "week": "2025-02-03",
+   "volume": 2916351.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 3.18,
+   "tvl": 172150759.0
+  },
+  {
+   "week": "2025-02-10",
+   "volume": 2812291.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 3.41,
+   "tvl": 178662783.0
+  },
+  {
+   "week": "2025-02-17",
+   "volume": 3516842.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 3.4699999999999998,
+   "tvl": 181696779.0
+  },
+  {
+   "week": "2025-02-24",
+   "volume": 7573285.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 3.55,
+   "tvl": 172144753.0
+  },
+  {
+   "week": "2025-03-03",
+   "volume": 5140234.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.88,
+   "tvl": 159027643.0
+  },
+  {
+   "week": "2025-03-10",
+   "volume": 4160178.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.52,
+   "tvl": 157219457.0
+  },
+  {
+   "week": "2025-03-17",
+   "volume": 3049606.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.7800000000000002,
+   "tvl": 162684222.0
+  },
+  {
+   "week": "2025-03-24",
+   "volume": 6363377.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.56,
+   "tvl": 153748905.0
+  },
+  {
+   "week": "2025-03-31",
+   "volume": 3853919.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.44,
+   "tvl": 146658188.0
+  },
+  {
+   "week": "2025-04-07",
+   "volume": 8783942.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.09,
+   "tvl": 139125403.0
+  },
+  {
+   "week": "2025-04-14",
+   "volume": 12005370.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.24,
+   "tvl": 138639225.0
+  },
+  {
+   "week": "2025-04-21",
+   "volume": 9180737.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.62,
+   "tvl": 156725102.0
+  },
+  {
+   "week": "2025-04-28",
+   "volume": 19383657.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "price": 2.42,
+   "tvl": 148064257.0
+  },
+  {
+   "week": "2025-05-05",
+   "volume": 10472324.0,
+   "fees": 2.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 3.14,
+   "tvl": 187122849.0
+  },
+  {
+   "week": "2025-05-12",
+   "volume": 14923193.0,
+   "fees": 6.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.83,
+   "tvl": 163510730.0
+  },
+  {
+   "week": "2025-05-19",
+   "volume": 19589704.0,
+   "fees": 45.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.79,
+   "tvl": 164325717.0
+  },
+  {
+   "week": "2025-05-26",
+   "volume": 39252659.0,
+   "fees": 43.64,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.46,
+   "tvl": 152130521.0
+  },
+  {
+   "week": "2025-06-02",
+   "volume": 13096070.0,
+   "fees": 171.34,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.42,
+   "tvl": 152945501.0
+  },
+  {
+   "week": "2025-06-09",
+   "volume": 22141750.0,
+   "fees": 12060.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.24,
+   "tvl": 145614358.0
+  },
+  {
+   "week": "2025-06-16",
+   "volume": 51409671.0,
+   "fees": 51203.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.97,
+   "tvl": 129062972.0
+  },
+  {
+   "week": "2025-06-23",
+   "volume": 89669317.0,
+   "fees": 25682.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.17,
+   "tvl": 139085945.0
+  },
+  {
+   "week": "2025-06-30",
+   "volume": 47233323.0,
+   "fees": 28215.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.18,
+   "tvl": 138844792.0
+  },
+  {
+   "week": "2025-07-07",
+   "volume": 30523843.0,
+   "fees": 25986.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.5300000000000002,
+   "tvl": 156607520.0
+  },
+  {
+   "week": "2025-07-14",
+   "volume": 45822314.0,
+   "fees": 51586.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.92,
+   "tvl": 179629639.0
+  },
+  {
+   "week": "2025-07-21",
+   "volume": 70922436.0,
+   "fees": 76217.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.88,
+   "tvl": 178812855.0
+  },
+  {
+   "week": "2025-07-28",
+   "volume": 99529752.0,
+   "fees": 102903.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.35,
+   "tvl": 153526246.0
+  },
+  {
+   "week": "2025-08-04",
+   "volume": 68771776.0,
+   "fees": 108020.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.75,
+   "tvl": 173626039.0
+  },
+  {
+   "week": "2025-08-11",
+   "volume": 71838529.0,
+   "fees": 81275.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.74,
+   "tvl": 171487726.0
+  },
+  {
+   "week": "2025-08-18",
+   "volume": 80457766.0,
+   "fees": 92503.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.65,
+   "tvl": 168202570.0
+  },
+  {
+   "week": "2025-08-25",
+   "volume": 59618573.0,
+   "fees": 77131.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.37,
+   "tvl": 151456871.0
+  },
+  {
+   "week": "2025-09-01",
+   "volume": 71408641.0,
+   "fees": 100337.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.4,
+   "tvl": 91709475.0
+  },
+  {
+   "week": "2025-09-08",
+   "volume": 126894883.0,
+   "fees": 166128.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.71,
+   "tvl": 102299299.0
+  },
+  {
+   "week": "2025-09-15",
+   "volume": 120904655.0,
+   "fees": 165294.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 3.14,
+   "tvl": 110401297.0
+  },
+  {
+   "week": "2025-09-22",
+   "volume": 116263984.0,
+   "fees": 205720.0,
+   "revenue": 18.0,
+   "holders_revenue": 0.0,
+   "price": 2.8,
+   "tvl": 167954716.0
+  },
+  {
+   "week": "2025-09-29",
+   "volume": 350920478.0,
+   "fees": 481852.0,
+   "revenue": 18.0,
+   "holders_revenue": 0.0,
+   "price": 2.9580501446850316,
+   "tvl": 181155223.0
+  },
+  {
+   "week": "2025-10-06",
+   "volume": 366959092.0,
+   "fees": 502831.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.3011115107155136,
+   "tvl": 148091447.0
+  },
+  {
+   "week": "2025-10-13",
+   "volume": 296831114.0,
+   "fees": 387713.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.166421060693436,
+   "tvl": 141920049.0
+  },
+  {
+   "week": "2025-10-20",
+   "volume": 360691246.0,
+   "fees": 562305.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.279371575297036,
+   "tvl": 158920106.0
+  },
+  {
+   "week": "2025-10-27",
+   "volume": 593841155.0,
+   "fees": 912236.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 2.173563543288203,
+   "tvl": 157147840.0
+  },
+  {
+   "week": "2025-11-03",
+   "volume": 966923998.0,
+   "fees": 1834207.0,
+   "revenue": 423175.0,
+   "holders_revenue": 0.0,
+   "price": 2.943495561076724,
+   "tvl": 129458575.0
+  },
+  {
+   "week": "2025-11-10",
+   "volume": 906270141.0,
+   "fees": 1706720.0,
+   "revenue": 151339.0,
+   "holders_revenue": 0.0,
+   "price": 2.4070017948837448,
+   "tvl": 175362439.0
+  },
+  {
+   "week": "2025-11-17",
+   "volume": 1058013914.0,
+   "fees": 2861336.0,
+   "revenue": 193533.0,
+   "holders_revenue": 0.0,
+   "price": 1.8407330212580848,
+   "tvl": 141523462.0
+  },
+  {
+   "week": "2025-11-24",
+   "volume": 532024724.0,
+   "fees": 1081010.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.8091632817736207,
+   "tvl": 141219258.0
+  },
+  {
+   "week": "2025-12-01",
+   "volume": 539992454.0,
+   "fees": 1372277.0,
+   "revenue": 176629.0,
+   "holders_revenue": 0.0,
+   "price": 1.7083767346563687,
+   "tvl": 124119596.0
+  },
+  {
+   "week": "2025-12-08",
+   "volume": 389054193.0,
+   "fees": 883110.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.5925941672227333,
+   "tvl": 122982330.0
+  },
+  {
+   "week": "2025-12-15",
+   "volume": 447538404.0,
+   "fees": 903401.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.5087560446343744,
+   "tvl": 116433449.0
+  },
+  {
+   "week": "2025-12-22",
+   "volume": 462213780.0,
+   "fees": 617804.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.5806304403062972,
+   "tvl": 120451014.0
+  },
+  {
+   "week": "2025-12-29",
+   "volume": 359172945.0,
+   "fees": 721870.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.710695572998312,
+   "tvl": 130628703.0
+  },
+  {
+   "week": "2026-01-05",
+   "volume": 609262606.0,
+   "fees": 1033510.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.6989900377362708,
+   "tvl": 126825752.0
+  },
+  {
+   "week": "2026-01-12",
+   "volume": 611972758.0,
+   "fees": 991628.0,
+   "revenue": 355826.0,
+   "holders_revenue": 0.0,
+   "price": 1.7493473443320653,
+   "tvl": 130197651.0
+  },
+  {
+   "week": "2026-01-19",
+   "volume": 688681303.0,
+   "fees": 1100259.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "price": 1.5037201387563603,
+   "tvl": 115285914.0
+  },
+  {
+   "week": "2026-01-26",
+   "volume": 699824235.0,
+   "fees": 1042751.0,
+   "revenue": 6523.0,
+   "holders_revenue": 0.0,
+   "price": 1.2039626267870913,
+   "tvl": 95421443.0
+  },
+  {
+   "week": "2026-02-02",
+   "volume": 918284731.0,
+   "fees": 1441752.0,
+   "revenue": 387194.0,
+   "holders_revenue": 0.0,
+   "price": 1.0744191981467333,
+   "tvl": 86571363.0
+  },
+  {
+   "week": "2026-02-09",
+   "volume": 585769078.0,
+   "fees": 918248.0,
+   "revenue": 66860.0,
+   "holders_revenue": 0.0,
+   "price": 1.0556333113911334,
+   "tvl": 87742493.0
+  },
+  {
+   "week": "2026-02-16",
+   "volume": 347144643.0,
+   "fees": 623204.0,
+   "revenue": 9116.0,
+   "holders_revenue": 0.0,
+   "price": 1.059060229378097,
+   "tvl": 83019953.0
+  },
+  {
+   "week": "2026-02-23",
+   "volume": 502768291.0,
+   "fees": 1121013.0,
+   "revenue": 200548.0,
+   "holders_revenue": 200548.0,
+   "price": 1.1680379922031965,
+   "tvl": 89383018.0
+  },
+  {
+   "week": "2026-03-02",
+   "volume": 469401009.0,
+   "fees": 950772.0,
+   "revenue": 61947.0,
+   "holders_revenue": 61947.0,
+   "price": 1.2138227228160654,
+   "tvl": 61989238.0
+  },
+  {
+   "week": "2026-03-09",
+   "volume": 401050199.0,
+   "fees": 672923.0,
+   "revenue": 106136.0,
+   "holders_revenue": 106136.0,
+   "price": 1.3477143572211612,
+   "tvl": 100415684.0
+  },
+  {
+   "week": "2026-03-16",
+   "volume": 495662517.0,
+   "fees": 754142.0,
+   "revenue": 71440.0,
+   "holders_revenue": 71440.0,
+   "price": 1.2842306177778022,
+   "tvl": 100098571.0
+  },
+  {
+   "week": "2026-03-23",
+   "volume": 485221446.0,
+   "fees": 845169.0,
+   "revenue": 298237.0,
+   "holders_revenue": 298237.0,
+   "price": 1.1608381813622952,
+   "tvl": 94097043.0
+  },
+  {
+   "week": "2026-03-30",
+   "volume": 527101835.0,
+   "fees": 786140.0,
+   "revenue": 58685.0,
+   "holders_revenue": 58685.0,
+   "price": 1.2557856164371337,
+   "tvl": 100095751.0
+  },
+  {
+   "week": "2026-04-06",
+   "volume": 520189451.0,
+   "fees": 889002.0,
+   "revenue": 60385.0,
+   "holders_revenue": 60385.0,
+   "price": 1.402621077879653,
+   "tvl": 107577134.0
+  },
+  {
+   "week": "2026-04-13",
+   "volume": 422332585.0,
+   "fees": 692615.0,
+   "revenue": 65667.0,
+   "holders_revenue": 65667.0,
+   "price": 1.3443455301789051,
+   "tvl": 41868209.0
+  },
+  {
+   "week": "2026-04-20",
+   "volume": 370792288.0,
+   "fees": 684514.0,
+   "revenue": 56830.05,
+   "holders_revenue": 56830.05,
+   "price": 1.4019839271019945,
+   "tvl": 94042459.0
+  },
+  {
+   "week": "2026-04-27",
+   "volume": 357776570.0,
+   "fees": 621952.0,
+   "revenue": 66418.0,
+   "holders_revenue": 66418.0,
+   "price": 1.2962764893204028,
+   "tvl": 99620897.0
+  },
+  {
+   "week": "2026-05-04",
+   "volume": 412549058.0,
+   "fees": 802972.0,
+   "revenue": 94097.0,
+   "holders_revenue": 94097.0,
+   "price": 1.5657935061846748,
+   "tvl": 116752300.0
+  },
+  {
+   "week": "2026-05-11",
+   "volume": 369759771.0,
+   "fees": 652255.0,
+   "revenue": 91253.0,
+   "holders_revenue": 91253.0,
+   "price": 1.4975208861290927,
+   "tvl": 94032306.0
+  },
+  {
+   "week": "2026-05-18",
+   "volume": 469403888.0,
+   "fees": 693984.0,
+   "revenue": 170976.0,
+   "holders_revenue": 170976.0,
+   "price": 2.45389596088122,
+   "tvl": 142760678.0
+  },
+  {
+   "week": "2026-05-25",
+   "volume": 620518411.0,
+   "fees": 643687.0,
+   "revenue": 236043.0,
+   "holders_revenue": 236043.0,
+   "price": 2.2403037027531107,
+   "tvl": 135129870.0
+  },
+  {
+   "week": "2026-06-01",
+   "volume": 753497166.0,
+   "fees": 977956.0,
+   "revenue": 312166.0,
+   "holders_revenue": 312166.0,
+   "price": 2.052980644905737,
+   "tvl": 110398312.0
+  },
+  {
+   "week": "2026-06-08",
+   "volume": 511536223.0,
+   "fees": 581454.0,
+   "revenue": 107032.0,
+   "holders_revenue": 107032.0,
+   "price": 2.215904207521864,
+   "tvl": 122752294.0
+  },
+  {
+   "week": "2026-06-15",
+   "volume": 467454334.0,
+   "fees": 591743.0,
+   "revenue": 105594.0,
+   "holders_revenue": 105594.0,
+   "price": 2.0978649613659233,
+   "tvl": 73661283.0
+  },
+  {
+   "week": "2026-06-22",
+   "volume": 462764375.0,
+   "fees": 694555.0,
+   "revenue": 72446.0,
+   "holders_revenue": 72446.0,
+   "price": 1.87021620623653,
+   "tvl": 111370177.0
+  },
+  {
+   "week": "2026-06-29",
+   "volume": 529868355.0,
+   "fees": 909077.0,
+   "revenue": 88058.0,
+   "holders_revenue": 88058.0,
+   "price": 2.013477940755319,
+   "tvl": 117170940.0
+  },
+  {
+   "week": "2026-07-06",
+   "volume": 522224078.0,
+   "fees": 753153.0,
+   "revenue": 108431.0,
+   "holders_revenue": 108431.0,
+   "price": 1.8893845151956215,
+   "tvl": 109849664.0
+  },
+  {
+   "week": "2026-07-13",
+   "volume": 515164294.0,
+   "fees": 681293.0,
+   "revenue": 134567.0,
+   "holders_revenue": 134567.0,
+   "price": 1.9323325669594247,
+   "tvl": 66241729.0
+  },
+  {
+   "week": "2026-07-20",
+   "volume": 470404954.0,
+   "fees": 741971.0,
+   "revenue": 122584.0,
+   "holders_revenue": 122584.0,
+   "price": 1.791064919572411,
+   "tvl": 105228142.0
+  },
+  {
+   "week": "2026-07-27",
+   "volume": 419713332.0,
+   "fees": 571331.0,
+   "revenue": 92391.0,
+   "holders_revenue": 92391.0,
+   "price": 1.6722692047355376,
+   "tvl": 99937245.0
+  },
+  {
+   "week": "2026-08-03",
+   "volume": 457931297.0,
+   "fees": 551816.0,
+   "revenue": 102154.0,
+   "holders_revenue": 102154.0,
+   "price": 1.610897381778781,
+   "tvl": 93878501.0
+  },
+  {
+   "week": "2026-08-10",
+   "volume": 457276829.0,
+   "fees": 508873.0,
+   "revenue": 88122.0,
+   "holders_revenue": 88122.0,
+   "price": 1.616586459900459,
+   "tvl": 53907032.0
+  },
+  {
+   "week": "2026-08-17",
+   "volume": 860544463.0,
+   "fees": 1391260.0,
+   "revenue": 283767.0,
+   "holders_revenue": 283767.0,
+   "price": 1.8784572567196742,
+   "tvl": 111163015.0
+  },
+  {
+   "week": "2026-08-24",
+   "volume": 785560430.0,
+   "fees": 1132729.0,
+   "revenue": 206367.0,
+   "holders_revenue": 206367.0,
+   "price": 1.8681154217385798,
+   "tvl": 64808911.0
+  },
+  {
+   "week": "2026-08-31",
+   "volume": 1019350783.0,
+   "fees": 1092132.0,
+   "revenue": 348876.0,
+   "holders_revenue": 348876.0,
+   "price": 2.19166557571438,
+   "tvl": 126918201.0
+  },
+  {
+   "week": "2026-09-07",
+   "volume": 909878844.0,
+   "fees": 1165568.0,
+   "revenue": 217908.0,
+   "holders_revenue": 217908.0,
+   "price": 2.3702719349774926,
+   "tvl": 133348666.0
+  },
+  {
+   "week": "2026-09-14",
+   "volume": 1163216436.0,
+   "fees": 2023036.0,
+   "revenue": 446287.0,
+   "holders_revenue": 446287.0,
+   "price": 3.5865306009892803,
+   "tvl": 189553786.0
+  },
+  {
+   "week": "2026-09-21",
+   "volume": 1279579539.0,
+   "fees": 2248167.0,
+   "revenue": 606702.0,
+   "holders_revenue": 606702.0,
+   "price": 5.035805330593034,
+   "tvl": 232135049.0
+  },
+  {
+   "week": "2026-09-28",
+   "volume": 944889347.0,
+   "fees": 1721249.0,
+   "revenue": 541373.0,
+   "holders_revenue": 541373.0,
+   "price": 4.829822220269547,
+   "tvl": 221938947.0
+  },
+  {
+   "week": "2026-10-05",
+   "volume": 1150847031.0,
+   "fees": 1794703.0,
+   "revenue": 570229.0,
+   "holders_revenue": 570229.0,
+   "price": 5.2910018341071225,
+   "tvl": 249670766.0
+  },
+  {
+   "week": "2026-10-12",
+   "volume": 875929514.0,
+   "fees": 1413386.0,
+   "revenue": 489623.0,
+   "holders_revenue": 489623.0,
+   "price": 4.856513264288132,
+   "tvl": 224496951.0
+  },
+  {
+   "week": "2026-10-19",
+   "volume": 773669340.0,
+   "fees": 1183968.0,
+   "revenue": 401502.0,
+   "holders_revenue": 401502.0,
+   "price": 4.496169195107218,
+   "tvl": 209803976.0
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2024-12",
+   "days": 22,
+   "volume": 2970992.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "avg_price": 5.84578947368421
+  },
+  {
+   "month": "2025-01",
+   "days": 31,
+   "volume": 6405486.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "avg_price": 5.1451101429285275
+  },
+  {
+   "month": "2025-02",
+   "days": 28,
+   "volume": 13194437.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "avg_price": 3.3809081396346983
+  },
+  {
+   "month": "2025-03",
+   "days": 31,
+   "volume": 23456822.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "avg_price": 2.782916666666667
+  },
+  {
+   "month": "2025-04",
+   "days": 30,
+   "volume": 45321918.0,
+   "fees": null,
+   "revenue": null,
+   "holders_revenue": null,
+   "avg_price": 2.2854545454545456
+  },
+  {
+   "month": "2025-05",
+   "days": 31,
+   "volume": 90736625.0,
+   "fees": 96.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.7530434782608695
+  },
+  {
+   "month": "2025-06",
+   "days": 30,
+   "volume": 184121616.0,
+   "fees": 95436.98,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.281304347826087
+  },
+  {
+   "month": "2025-07",
+   "days": 31,
+   "volume": 235933309.0,
+   "fees": 217997.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.5654166666666667
+  },
+  {
+   "month": "2025-08",
+   "days": 31,
+   "volume": 331560249.0,
+   "fees": 419519.0,
+   "revenue": 0.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.577142857142857
+  },
+  {
+   "month": "2025-09",
+   "days": 30,
+   "volume": 483791180.0,
+   "fees": 712949.0,
+   "revenue": 18.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.7427272727272727
+  },
+  {
+   "month": "2025-10",
+   "days": 31,
+   "volume": 1723102048.0,
+   "fees": 2496648.0,
+   "revenue": 18.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.472666752280739
+  },
+  {
+   "month": "2025-11",
+   "days": 30,
+   "volume": 3661054797.0,
+   "fees": 7758092.0,
+   "revenue": 768047.0,
+   "holders_revenue": 0.0,
+   "avg_price": 2.2140563019302424
+  },
+  {
+   "month": "2025-12",
+   "days": 31,
+   "volume": 2009785103.0,
+   "fees": 4116558.0,
+   "revenue": 176629.0,
+   "holders_revenue": 0.0,
+   "avg_price": 1.5985841965377479
+  },
+  {
+   "month": "2026-01",
+   "days": 31,
+   "volume": 2724468717.0,
+   "fees": 4410217.0,
+   "revenue": 359240.0,
+   "holders_revenue": 0.0,
+   "avg_price": 1.6286404172886184
+  },
+  {
+   "month": "2026-02",
+   "days": 28,
+   "volume": 2378261095.0,
+   "fees": 4134501.0,
+   "revenue": 663127.0,
+   "holders_revenue": 196848.0,
+   "avg_price": 1.0697899434205969
+  },
+  {
+   "month": "2026-03",
+   "days": 31,
+   "volume": 2079695033.0,
+   "fees": 3590113.0,
+   "revenue": 563460.0,
+   "holders_revenue": 563460.0,
+   "avg_price": 1.2756714031438234
+  },
+  {
+   "month": "2026-04",
+   "days": 30,
+   "volume": 1895540502.0,
+   "fees": 3207256.0,
+   "revenue": 258740.05,
+   "holders_revenue": 258740.05,
+   "avg_price": 1.3412432954505573
+  },
+  {
+   "month": "2026-05",
+   "days": 31,
+   "volume": 1995687999.0,
+   "fees": 3002309.0,
+   "revenue": 619614.0,
+   "holders_revenue": 619614.0,
+   "avg_price": 1.7902766316693346
+  },
+  {
+   "month": "2026-06",
+   "days": 30,
+   "volume": 2354692014.0,
+   "fees": 3111812.0,
+   "revenue": 619475.0,
+   "holders_revenue": 619475.0,
+   "avg_price": 2.166289103019819
+  },
+  {
+   "month": "2026-07",
+   "days": 31,
+   "volume": 2205579711.0,
+   "fees": 3271913.0,
+   "revenue": 504864.0,
+   "holders_revenue": 504864.0,
+   "avg_price": 1.884479230736516
+  },
+  {
+   "month": "2026-08",
+   "days": 31,
+   "volume": 2777327253.0,
+   "fees": 3836975.0,
+   "revenue": 723262.0,
+   "holders_revenue": 723262.0,
+   "avg_price": 1.734643564876025
+  },
+  {
+   "month": "2026-09",
+   "days": 30,
+   "volume": 4803094377.0,
+   "fees": 7325792.0,
+   "revenue": 1839513.0,
+   "holders_revenue": 1839513.0,
+   "avg_price": 3.193219997398541
+  },
+  {
+   "month": "2026-10",
+   "days": 30,
+   "volume": 3912208310.0,
+   "fees": 5943882.0,
+   "revenue": 2145016.0,
+   "holders_revenue": 2145016.0,
+   "avg_price": 4.922121569358222
+  }
+ ],
+ "caveats": [
+  "Correlation is not causation; NEAR price is dominated by crypto-wide beta (BTC/ETH), which is not controlled for yet.",
+  "Weekly sample is short (tens of observations); a t-stat near 2 is weak evidence.",
+  "DefiLlama 'revenue' is NEAR/wNEAR swept into NEAR revenue wallets; sweep timing means a day's revenue can exceed that day's fees.",
+  "The buyback program began 2026-02-23; earlier captured revenue stayed in the treasury.",
+  "Market cap and supply are a single NearBlocks snapshot at fetch time."
+ ]
+}

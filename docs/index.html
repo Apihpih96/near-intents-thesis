@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does NEAR Intents volume accrue value to $NEAR?</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="data.js"></script>
+<style>
+  :root { --bg:#0b0d10; --card:#14181d; --ink:#e8ecef; --mute:#8a96a3; --acc:#00ec97; --warn:#ffb020; --line:#232a31; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  main { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:24px; margin:0 0 4px; } h2 { font-size:17px; margin:0 0 10px; }
+  .sub { color:var(--mute); margin:0 0 20px; }
+  .grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); margin-bottom:16px; }
+  .tile, .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }
+  .tile .k { color:var(--mute); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .tile .v { font-size:22px; font-weight:650; margin-top:2px; }
+  .tile .n { color:var(--mute); font-size:12px; }
+  .card { margin-bottom:16px; }
+  .card p { color:var(--mute); margin:6px 0 0; font-size:13px; }
+  canvas { max-height:320px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+  th:first-child, td:first-child { text-align:left; }
+  th { color:var(--mute); font-weight:500; }
+  input { width:80px; background:#0b0d10; color:var(--ink); border:1px solid var(--line); border-radius:6px; padding:4px 6px; text-align:right; }
+  .acc { color:var(--acc); } .warn { color:var(--warn); }
+  .chain { display:flex; flex-wrap:wrap; gap:6px; align-items:center; font-size:13px; }
+  .chain span.step { background:#0f1317; border:1px solid var(--line); border-radius:8px; padding:6px 10px; }
+  .chain b { display:block; font-size:15px; }
+  a { color:var(--acc); } code { font-size:12px; }
+  ul.cav { color:var(--mute); font-size:13px; padding-left:18px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Does NEAR Intents' cross-chain volume accrue value to the NEAR token?</h1>
+  <p class="sub" id="asof"></p>
+
+  <div class="grid" id="tiles"></div>
+
+  <div class="card">
+    <h2>The value-capture chain, last 30 days</h2>
+    <div class="chain" id="chain"></div>
+    <p>Each arrow is a leak: of every $1 of Intents volume, how much becomes fees, how much NEAR captures, and how much buys $NEAR.</p>
+  </div>
+
+  <div class="card"><h2>Weekly Intents volume vs NEAR price</h2><canvas id="cVol"></canvas>
+    <p>Bars: weekly swap volume (left axis). Line: NEAR price at week end (right axis). Dashed line: buyback program starts 2026-02-23.</p></div>
+
+  <div class="card"><h2>Weekly fees, captured revenue and $NEAR buyback</h2><canvas id="cFees"></canvas>
+    <p>Fees = protocol + frontend affiliate fees. Revenue = NEAR/wNEAR swept into NEAR revenue wallets. Buyback = revenue spent buying $NEAR since 2026-02-23 (DefiLlama "holders revenue").</p></div>
+
+  <div class="card"><h2>Does volume move price? Weekly log-change correlation</h2>
+    <table id="tRel"></table>
+    <canvas id="cLag"></canvas>
+    <p>Correlation of weekly log change in Intents volume with NEAR's weekly log return, at lags of -4..+4 weeks (positive lag = volume leads price). Not controlled for BTC/ETH market moves yet.</p></div>
+
+  <div class="card"><h2>Bear / base / bull: how much of NEAR's market cap can Intents buybacks justify?</h2>
+    <p style="margin-bottom:10px">Edit any cell; the results recompute. Defaults come from <code>model/assumptions.yaml</code>. Baseline from data: <span id="baseline"></span></p>
+    <table id="tModel"></table>
+  </div>
+
+  <div class="card"><h2>Caveats</h2><ul class="cav" id="cav"></ul></div>
+
+  <div class="card"><h2>Data provenance</h2><table id="tProv"></table>
+    <p>Raw responses are committed in <code>data/raw/</code> with SHA-256 hashes; <code>python -m pipeline build</code> reproduces every number here offline.</p></div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const D = window.THESIS_DATA, M = D.metrics, MO = D.model;
+const usd = (v, d=1) => v == null ? "–" : Math.abs(v) >= 1e9 ? "$" + (v/1e9).toFixed(d) + "B" : Math.abs(v) >= 1e6 ? "$" + (v/1e6).toFixed(d) + "M" : Math.abs(v) >= 1e3 ? "$" + (v/1e3).toFixed(d) + "K" : "$" + v.toFixed(2);
+const pct = (v, d=2) => v == null ? "–" : (v*100).toFixed(d) + "%";
+const num = (v, d=2) => v == null ? "–" : v.toFixed(d);
+const vc = M.value_capture, w30 = M.windows["30d"], tr = M.take_rates["30d"];
+
+document.getElementById("asof").textContent =
+  `Data through ${M.as_of_last_full_day} (UTC). Fetched ${D.manifest.fetched_at_utc}. Sources: DefiLlama, NearBlocks.`;
+
+const tiles = [
+  ["Intents volume, 30d", usd(w30.volume), `${usd(M.windows.all_time.volume)} all-time`],
+  ["Fees, 30d", usd(w30.fees), `take rate ${pct(tr.fees_per_volume,3)} of volume`],
+  ["NEAR captured, 30d", usd(w30.revenue), `${pct(tr.revenue_per_fees,0)} of fees`],
+  ["$NEAR buyback, annualized", usd(vc.annualized_buyback_usd_from_30d), `${pct(vc.buyback_yield_on_mcap)} of market cap`],
+  ["NEAR price", "$" + num(M.current.near_price_usd), `mcap ${usd(vc.market_cap_usd)}`],
+  ["NEAR bought back since 2026-02-23", (vc.approx_near_bought_since_start/1e6).toFixed(2) + "M NEAR", `≈${pct(vc.approx_near_bought_pct_circulating)} of circulating, ${usd(vc.buyback_usd_since_start)}`],
+];
+document.getElementById("tiles").innerHTML = tiles.map(t =>
+  `<div class="tile"><div class="k">${t[0]}</div><div class="v">${t[1]}</div><div class="n">${t[2]}</div></div>`).join("");
+
+document.getElementById("chain").innerHTML = [
+  ["Volume", usd(w30.volume)], ["Fees", usd(w30.fees) + " · " + pct(tr.fees_per_volume,3)],
+  ["NEAR captured", usd(w30.revenue) + " · " + pct(tr.revenue_per_volume,3)],
+  ["Buyback", usd(w30.holders_revenue) + " · " + pct(tr.buyback_per_revenue,0) + " of captured"],
+  ["vs market cap", pct(vc.buyback_yield_on_mcap) + " / yr"],
+].map((s,i) => (i ? "→ " : "") + `<span class="step">${s[0]}<b>${s[1]}</b></span>`).join(" ");
+
+Chart.defaults.color = "#8a96a3"; Chart.defaults.borderColor = "#232a31";
+const W = M.weekly, labels = W.map(w => w.week);
+const bbIdx = labels.findIndex(l => l >= vc.buyback_since);
+const bbLine = { id:"bb", afterDraw(c) { const x = c.scales.x.getPixelForValue(bbIdx); const {top,bottom} = c.chartArea;
+  const g = c.ctx; g.save(); g.setLineDash([4,4]); g.strokeStyle = "#ffb020"; g.beginPath(); g.moveTo(x,top); g.lineTo(x,bottom); g.stroke(); g.restore(); } };
+const money = { ticks: { callback: v => usd(v,0) } };
+
+new Chart($("cVol"), { data: { labels, datasets: [
+  { type:"bar", label:"Weekly volume", data:W.map(w=>w.volume), backgroundColor:"#00ec9766", yAxisID:"y" },
+  { type:"line", label:"NEAR price", data:W.map(w=>w.price), borderColor:"#e8ecef", pointRadius:0, yAxisID:"y1" } ] },
+  options: { scales: { y: money, y1: { position:"right", grid:{drawOnChartArea:false}, ticks:{callback:v=>"$"+v} } } }, plugins:[bbLine] });
+
+new Chart($("cFees"), { type:"line", data: { labels, datasets: [
+  { label:"Fees", data:W.map(w=>w.fees), borderColor:"#8a96a3", pointRadius:0 },
+  { label:"NEAR captured revenue", data:W.map(w=>w.revenue), borderColor:"#00ec97", pointRadius:0 },
+  { label:"$NEAR buyback", data:W.map(w=>w.holders_revenue), borderColor:"#ffb020", pointRadius:0 } ] },
+  options: { scales: { y: money } }, plugins:[bbLine] });
+
+const R = M.relations, relRows = [
+  ["Volume vs price, all weeks", R.volume_vs_price],
+  ["Volume vs price, before buyback", R.volume_vs_price_pre_buyback],
+  ["Volume vs price, since buyback", R.volume_vs_price_post_buyback],
+  ["Captured revenue vs price", R.revenue_vs_price] ];
+$("tRel").innerHTML = "<tr><th></th><th>corr</th><th>R²</th><th>t-stat</th><th>weeks</th></tr>" + relRows.map(([n,r]) => {
+  const g = r.regression_price_on_flow || {};
+  return `<tr><td>${n}</td><td>${num(r.weekly_logchange_corr)}</td><td>${num(g.r2)}</td><td class="${Math.abs(g.t_stat)>=2?"acc":""}">${num(g.t_stat)}</td><td>${r.n_weeks}</td></tr>`; }).join("");
+const lags = Object.keys(R.volume_vs_price.lagged_corr);
+new Chart($("cLag"), { type:"bar", data: { labels: lags.map(l => l + "w"), datasets: [
+  { label:"All weeks", data: lags.map(l => R.volume_vs_price.lagged_corr[l]), backgroundColor:"#8a96a3" },
+  { label:"Since buyback", data: lags.map(l => R.volume_vs_price_post_buyback.lagged_corr[l]), backgroundColor:"#00ec97" } ] },
+  options: { scales: { y: { min:-1, max:1 } } } });
+
+// ---- editable model (same formula as pipeline/model.py) ----
+const B = MO.baseline, names = Object.keys(MO.scenarios);
+$("baseline").textContent = `annual volume ${usd(B.annual_volume_usd)} (30d × 365/30), take rate ${pct(B.take_rate,3)} (captured/volume, 90d), buyback share ${pct(B.buyback_share,0)} (90d).`;
+const knobs = [["volume_growth","Volume growth (1y)"],["take_rate_multiplier","Take-rate multiplier"],["buyback_share","Buyback share of captured"],["multiple","Multiple on annual buyback"]];
+const state = Object.fromEntries(names.map(n => { const i = MO.scenarios[n].inputs; return [n, {...i, buyback_share: i.buyback_share_used}]; }));
+function run(s) {
+  const vol = B.annual_volume_usd * (1 + +s.volume_growth), rev = vol * B.take_rate * +s.take_rate_multiplier, bb = rev * +s.buyback_share, val = bb * +s.multiple;
+  return { vol, rev, bb, val, perNear: val / B.circulating_supply_near, share: val / B.market_cap_usd, yld: bb / B.market_cap_usd };
+}
+function renderModel() {
+  const res = Object.fromEntries(names.map(n => [n, run(state[n])]));
+  const head = "<tr><th></th>" + names.map(n => `<th>${n}</th>`).join("") + "</tr>";
+  const inp = knobs.map(([k,l]) => `<tr><td>${l}</td>` + names.map(n => `<td><input data-s="${n}" data-k="${k}" value="${(+state[n][k]).toFixed(k==="multiple"?0:2)}"></td>`).join("") + "</tr>").join("");
+  const out = [["Annual volume", r => usd(r.vol)], ["Annual NEAR captured", r => usd(r.rev)], ["Annual $NEAR buyback", r => usd(r.bb)],
+    ["Buyback as % of today's mcap", r => pct(r.yld)], ["Value supported", r => usd(r.val)],
+    ["…per NEAR", r => "$" + r.perNear.toFixed(3)], ["…as % of today's price", r => `<b class="acc">${pct(r.share,1)}</b>`]]
+    .map(([l,f]) => `<tr><td>${l}</td>` + names.map(n => `<td>${f(res[n])}</td>`).join("") + "</tr>").join("");
+  $("tModel").innerHTML = head + inp + `<tr><td colspan="4" style="color:#8a96a3">Results · today's price $${num(B.near_price_usd)}</td></tr>` + out;
+  $("tModel").querySelectorAll("input").forEach(el => el.onchange = e => { state[el.dataset.s][el.dataset.k] = parseFloat(el.value) || 0; renderModel(); });
+}
+renderModel();
+
+$("cav").innerHTML = M.caveats.map(c => `<li>${c}</li>`).join("");
+$("tProv").innerHTML = "<tr><th>Series</th><th>Provider</th><th>Endpoint</th><th>SHA-256</th></tr>" +
+  Object.entries(D.manifest.sources).map(([k,s]) => `<tr><td>${s.what}</td><td>${s.provider}</td><td>${s.urls.map(u=>`<a href="${u}">${new URL(u).host}${new URL(u).pathname}</a>`).join("<br>")}</td><td><code>${s.sha256.slice(0,10)}…</code></td></tr>`).join("");
+</script>
+</body>
+</html>
