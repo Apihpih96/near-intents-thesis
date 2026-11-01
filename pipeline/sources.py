@@ -30,6 +30,46 @@ SOURCES = {
         "provider": "DefiLlama coins (CoinGecko id 'near')",
         "what": "NEAR daily price (USD)",
     },
+    "btc_price": {
+        # BTC/ETH: the crypto-market factor NEAR returns are controlled for (same 500-day chunking as near_price).
+        "url_template": "https://coins.llama.fi/chart/coingecko:bitcoin?start={start}&span=500&period=1d",
+        "chunk_start": 1733011200,
+        "chunk_days": 500,
+        "provider": "DefiLlama coins (CoinGecko id 'bitcoin')",
+        "what": "BTC daily price (USD), market-beta control",
+    },
+    "eth_price": {
+        "url_template": "https://coins.llama.fi/chart/coingecko:ethereum?start={start}&span=500&period=1d",
+        "chunk_start": 1733011200,
+        "chunk_days": 500,
+        "provider": "DefiLlama coins (CoinGecko id 'ethereum')",
+        "what": "ETH daily price (USD), market-beta control",
+    },
+    "comparables_mcap": {
+        "url": "https://coins.llama.fi/mcaps",
+        "method": "POST",
+        "body": {"coins": ["coingecko:hyperliquid", "coingecko:pump-fun", "coingecko:jupiter-exchange-solana"]},
+        "provider": "DefiLlama coins",
+        "what": "Current market cap of tokens that also run fee-funded buybacks (valuation comparables)",
+    },
+    "comp_hyperliquid_holders_revenue": {
+        "url": "https://api.llama.fi/summary/fees/hyperliquid?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true",
+        "provider": "DefiLlama",
+        "what": "Hyperliquid daily holders revenue (Assistance Fund HYPE buybacks), USD",
+        "gecko": "coingecko:hyperliquid",
+    },
+    "comp_pumpfun_holders_revenue": {
+        "url": "https://api.llama.fi/summary/fees/pump.fun?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true",
+        "provider": "DefiLlama",
+        "what": "pump.fun daily holders revenue (PUMP buybacks), USD",
+        "gecko": "coingecko:pump-fun",
+    },
+    "comp_jupiter_holders_revenue": {
+        "url": "https://api.llama.fi/summary/fees/jupiter?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true",
+        "provider": "DefiLlama",
+        "what": "Jupiter daily holders revenue (JUP buybacks), USD",
+        "gecko": "coingecko:jupiter-exchange-solana",
+    },
     "nearblocks_stats": {
         "url": "https://api.nearblocks.io/v1/stats",
         "provider": "NearBlocks",

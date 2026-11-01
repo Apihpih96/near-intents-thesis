@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-01T00:17:00Z",
+  "fetched_at_utc": "2026-11-01T06:16:33Z",
   "sources": {
     "intents_volume": {
       "file": "data/raw/intents_volume.json",
@@ -11,8 +11,8 @@
       "http_status": [
         200
       ],
-      "sha256": "b019510e1d048784a3a7b99dd446cb50d0c4ad2b2f5424a34466f4f64f8dd546",
-      "bytes": 49698
+      "sha256": "32bbc9eb02b10e9345b938163199442889258c47793690d976306d22816ef177",
+      "bytes": 49768
     },
     "intents_fees": {
       "file": "data/raw/intents_fees.json",
@@ -24,8 +24,8 @@
       "http_status": [
         200
       ],
-      "sha256": "83acb532aa98055f60cf46e9f2461d00b162bcbd7c24292fe6b84d2a3b2ac638",
-      "bytes": 38259
+      "sha256": "1491b037f1f0930d115cc3ccb02d9930f73cf39d61b1d05c7dfa9ac4e25dd98b",
+      "bytes": 38316
     },
     "intents_revenue": {
       "file": "data/raw/intents_revenue.json",
@@ -37,8 +37,8 @@
       "http_status": [
         200
       ],
-      "sha256": "679b3a0e6d2b3a86e7d731b7ccda39ea02c5891ecc96d2a701488a2eced1ea19",
-      "bytes": 35859
+      "sha256": "9c00d02869370bc8d39be3e0b91b67cebf0278600ab99d4079692a81eac08c50",
+      "bytes": 35920
     },
     "intents_holders_revenue": {
       "file": "data/raw/intents_holders_revenue.json",
@@ -50,8 +50,8 @@
       "http_status": [
         200
       ],
-      "sha256": "3fb2eca54e64097d6e6fcf460125a5c52115ff7c6ee0194e1e8f51f05b06045c",
-      "bytes": 35657
+      "sha256": "1082d38c6c6e45b112a494226402077ace1838994c2e4e018e9af7a9e71bd73b",
+      "bytes": 35727
     },
     "near_price": {
       "file": "data/raw/near_price.json",
@@ -68,6 +68,96 @@
       "sha256": "86425668437b0115d133b31c24d624b5654a3bbd2c6f54e855274d4d9a4045e9",
       "bytes": 32564
     },
+    "btc_price": {
+      "file": "data/raw/btc_price.json",
+      "urls": [
+        "https://coins.llama.fi/chart/coingecko:bitcoin?start=1733011200&span=500&period=1d",
+        "https://coins.llama.fi/chart/coingecko:bitcoin?start=1776211200&span=500&period=1d"
+      ],
+      "provider": "DefiLlama coins (CoinGecko id 'bitcoin')",
+      "what": "BTC daily price (USD), market-beta control",
+      "http_status": [
+        200,
+        200
+      ],
+      "sha256": "9dc26ca582408eb0a366d4c70e4e01e5214a9f6eee34c37a18213d7654cfd244",
+      "bytes": 32530
+    },
+    "eth_price": {
+      "file": "data/raw/eth_price.json",
+      "urls": [
+        "https://coins.llama.fi/chart/coingecko:ethereum?start=1733011200&span=500&period=1d",
+        "https://coins.llama.fi/chart/coingecko:ethereum?start=1776211200&span=500&period=1d"
+      ],
+      "provider": "DefiLlama coins (CoinGecko id 'ethereum')",
+      "what": "ETH daily price (USD), market-beta control",
+      "http_status": [
+        200,
+        200
+      ],
+      "sha256": "0faed418598d7feae164dccf1d407810aa211319019cad343c02aeb29e424f6a",
+      "bytes": 33090
+    },
+    "comparables_mcap": {
+      "file": "data/raw/comparables_mcap.json",
+      "urls": [
+        "https://coins.llama.fi/mcaps"
+      ],
+      "method": "POST",
+      "post_body": {
+        "coins": [
+          "coingecko:hyperliquid",
+          "coingecko:pump-fun",
+          "coingecko:jupiter-exchange-solana"
+        ]
+      },
+      "provider": "DefiLlama coins",
+      "what": "Current market cap of tokens that also run fee-funded buybacks (valuation comparables)",
+      "http_status": [
+        200
+      ],
+      "sha256": "8fbd4bd9b498a8406ef5ec9aba0995fdb622072703570093d7b54a605a62963b",
+      "bytes": 233
+    },
+    "comp_hyperliquid_holders_revenue": {
+      "file": "data/raw/comp_hyperliquid_holders_revenue.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/hyperliquid?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true"
+      ],
+      "provider": "DefiLlama",
+      "what": "Hyperliquid daily holders revenue (Assistance Fund HYPE buybacks), USD",
+      "http_status": [
+        200
+      ],
+      "sha256": "36dd667fc6915ae6cf2524ca2caa1f30237875130d8cb09210ea31e6a840aa69",
+      "bytes": 24177
+    },
+    "comp_pumpfun_holders_revenue": {
+      "file": "data/raw/comp_pumpfun_holders_revenue.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/pump.fun?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true"
+      ],
+      "provider": "DefiLlama",
+      "what": "pump.fun daily holders revenue (PUMP buybacks), USD",
+      "http_status": [
+        200
+      ],
+      "sha256": "0237deaf312b82d8586767ce7ab8ea578f41cb1d1599b4295273104f1666664c",
+      "bytes": 17235
+    },
+    "comp_jupiter_holders_revenue": {
+      "file": "data/raw/comp_jupiter_holders_revenue.json",
+      "urls": [
+        "https://api.llama.fi/summary/fees/jupiter?dataType=dailyHoldersRevenue&excludeTotalDataChartBreakdown=true"
+      ],
+      "provider": "DefiLlama",
+      "what": "Jupiter daily holders revenue (JUP buybacks), USD",
+      "http_status": [
+        200
+      ],
+      "sha256": "a483392da372f0f9106f5c4ecc8014cea000ced4bc73d20c396962fdc3962fbf",
+      "bytes": 47462
+    },
     "nearblocks_stats": {
       "file": "data/raw/nearblocks_stats.json",
       "urls": [
@@ -78,8 +168,8 @@
       "http_status": [
         200
       ],
-      "sha256": "e7f9df0a88720d757af3b3fe8426820ce5957535a141bbc7139be3db8566e986",
-      "bytes": 479
+      "sha256": "9c8a647c90b631c66d2b5a6018d5f0b69837f3297ee4f4cac5c140668ee099ea",
+      "bytes": 478
     },
     "near_chain_tvl": {
       "file": "data/raw/near_chain_tvl.json",
@@ -91,8 +181,8 @@
       "http_status": [
         200
       ],
-      "sha256": "13cc41deb1759a249cff1f08f6251fdd516d7159678dbd92f6b331d56a971100",
-      "bytes": 67600
+      "sha256": "580d4baad76af0e37966db8d9df3b02a887f127913c8b050021252ce4733facb",
+      "bytes": 67636
     }
   }
 }

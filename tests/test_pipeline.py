@@ -4,7 +4,9 @@ import json
 import unittest
 from pathlib import Path
 
-from pipeline import clean, metrics, model
+import statistics as st
+
+from pipeline import clean, metrics, model, robustness
 from pipeline.sources import SOURCES
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,6 +64,54 @@ class TestBuild(unittest.TestCase):
         s = self.model["scenarios"]
         self.assertLess(s["bear"]["value_supported_usd"], s["base"]["value_supported_usd"])
         self.assertLess(s["base"]["value_supported_usd"], s["bull"]["value_supported_usd"])
+
+    def test_comparables_present_and_sane(self):
+        comps = self.metrics["comparables"]
+        self.assertEqual(len(comps), 3)
+        for c in comps:
+            self.assertGreater(c["mcap_to_annual_buyback"], 1, c["token"])
+            self.assertLess(c["mcap_to_annual_buyback"], 500, c["token"])
+
+    def test_issuance_offset(self):
+        iss = self.model["issuance"]
+        c = self.daily["current"]
+        expect = iss["annual_issuance_rate"] * c["total_supply_near"] * c["near_price_usd"]
+        self.assertAlmostEqual(iss["annual_issuance_usd_at_current_price"], expect, delta=1e-6 * expect)
+
+    def test_market_controls_loaded(self):
+        rows = [r for r in self.daily["rows"] if r["date"] >= "2025-01-01"]
+        self.assertTrue(all(r["btc"] and r["eth"] for r in rows[:-1]))
+        self.assertTrue(10_000 < rows[0]["btc"] < 1_000_000)
+
+    def test_robustness_samples(self):
+        rb = self.metrics["robustness"]
+        labels = [s["label"] for s in rb["samples"]]
+        self.assertTrue(any("pre-buyback" in l for l in labels))
+        self.assertTrue(any("post-buyback" in l for l in labels))
+        for s in rb["samples"]:
+            self.assertGreaterEqual(s["n_weeks"], 12, s["label"])
+            self.assertIsNotNone(s["dvol_t_newey_west_controlled"], s["label"])
+        self.assertGreater(len(rb["rolling"]), 10)
+
+
+class TestOLS(unittest.TestCase):
+    def test_single_regressor_matches_stdlib(self):
+        x = [0.1, -0.2, 0.05, 0.3, -0.1, 0.2, 0.0, -0.05, 0.15, -0.3, 0.25, 0.12]
+        y = [0.5 * v + 0.01 * ((i % 3) - 1) for i, v in enumerate(x)]
+        res = robustness.ols(y, [[v] for v in x], ["x"])
+        slope, intercept = st.linear_regression(x, y)
+        self.assertAlmostEqual(res["coef"]["x"], slope, places=10)
+        self.assertAlmostEqual(res["coef"]["intercept"], intercept, places=10)
+
+    def test_recovers_two_coefficients(self):
+        import random
+        rnd = random.Random(7)
+        X = [[rnd.gauss(0, 1), rnd.gauss(0, 1)] for _ in range(400)]
+        y = [0.3 + 1.5 * a - 0.7 * b + rnd.gauss(0, 0.1) for a, b in X]
+        res = robustness.ols(y, X, ["a", "b"])
+        self.assertAlmostEqual(res["coef"]["a"], 1.5, delta=0.03)
+        self.assertAlmostEqual(res["coef"]["b"], -0.7, delta=0.03)
+        self.assertGreater(abs(res["t_newey_west"]["a"]), 50)
 
 
 if __name__ == "__main__":

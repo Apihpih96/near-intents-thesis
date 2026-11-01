@@ -1,65 +1,106 @@
 {
  "formula": "value_supported = annual_volume*(1+volume_growth) * take_rate*take_rate_multiplier * buyback_share * multiple",
  "baseline": {
-  "annual_volume_usd": 47598534438.333336,
-  "take_rate": 0.00041045055225536565,
+  "annual_volume_usd": 46970693144.666664,
+  "take_rate": 0.00041269640677346354,
   "buyback_share": 1.0,
-  "market_cap_usd": 5787278866.0,
+  "market_cap_usd": 5774450855.0,
   "circulating_supply_near": 1249836992.159308,
-  "near_price_usd": 4.42
+  "near_price_usd": 4.41,
+  "total_supply_near": 1310498876.795136,
+  "annual_buyback_usd_now": 25792420.833333332,
+  "market_implied_buyback_multiple": 223.88169347552196
  },
  "assumptions_file": "model/assumptions.yaml",
+ "issuance": {
+  "annual_issuance_rate": 0.025,
+  "annual_issuance_usd_at_current_price": 144482501.16666377,
+  "buyback_vs_issuance_now": 0.1785158799513112,
+  "note": "Max-issuance upper bound (rate x total supply x price). Bought-back NEAR is held, not burned [S1][S5]."
+ },
+ "comparables": [
+  {
+   "token": "Hyperliquid",
+   "gecko_id": "coingecko:hyperliquid",
+   "market_cap_usd": 21098130405.277912,
+   "holders_revenue_30d_usd": 67151165.0,
+   "annualized_holders_revenue_usd": 817005840.8333334,
+   "mcap_to_annual_buyback": 25.823720407871434,
+   "last_day": "2026-10-31"
+  },
+  {
+   "token": "pump.fun",
+   "gecko_id": "coingecko:pump-fun",
+   "market_cap_usd": 1956017026.446084,
+   "holders_revenue_30d_usd": 27615967.0,
+   "annualized_holders_revenue_usd": 335994265.1666667,
+   "mcap_to_annual_buyback": 5.8215786078248115,
+   "last_day": "2026-10-31"
+  },
+  {
+   "token": "Jupiter",
+   "gecko_id": "coingecko:jupiter-exchange-solana",
+   "market_cap_usd": 874570714.9248208,
+   "holders_revenue_30d_usd": 1956053.32,
+   "annualized_holders_revenue_usd": 23798648.72666667,
+   "mcap_to_annual_buyback": 36.748755148642275,
+   "last_day": "2026-10-31"
+  }
+ ],
  "scenarios": {
   "bear": {
    "inputs": {
     "volume_growth": -0.5,
     "take_rate_multiplier": 0.75,
     "buyback_share": 0.5,
-    "multiple": 10,
+    "multiple": 6,
     "buyback_share_used": 0.5
    },
-   "annual_volume_usd": 23799267219.166668,
-   "annual_captured_revenue_usd": 7326316.780034984,
-   "annual_buyback_usd": 3663158.390017492,
-   "annual_buyback_pct_of_mcap": 0.0006329673193283256,
-   "annual_near_bought_at_current_price": 828768.8665197947,
-   "value_supported_usd": 36631583.90017492,
-   "value_supported_per_near_usd": 0.029309089209215655,
-   "share_of_current_mcap_supported": 0.006329673193283257
+   "annual_volume_usd": 23485346572.333332,
+   "annual_captured_revenue_usd": 7269238.606673583,
+   "annual_buyback_usd": 3634619.3033367917,
+   "annual_buyback_pct_of_mcap": 0.0006294311605734138,
+   "annual_near_bought_at_current_price": 824176.7127747827,
+   "value_supported_usd": 21807715.82002075,
+   "value_supported_per_near_usd": 0.017448448043087744,
+   "share_of_current_mcap_supported": 0.003776586963440483,
+   "buyback_vs_issuance": 0.02515612114953753
   },
   "base": {
    "inputs": {
-    "volume_growth": 0.25,
+    "volume_growth": 0.0,
     "take_rate_multiplier": 1.0,
     "buyback_share": "observed",
-    "multiple": 20,
+    "multiple": 26,
     "buyback_share_used": 1.0
    },
-   "annual_volume_usd": 59498168047.91667,
-   "annual_captured_revenue_usd": 24421055.93344995,
-   "annual_buyback_usd": 24421055.93344995,
-   "annual_buyback_pct_of_mcap": 0.0042197821288555044,
-   "annual_near_bought_at_current_price": 5525125.776798631,
-   "value_supported_usd": 488421118.668999,
-   "value_supported_per_near_usd": 0.3907878561228754,
-   "share_of_current_mcap_supported": 0.08439564257711009
+   "annual_volume_usd": 46970693144.666664,
+   "annual_captured_revenue_usd": 19384636.284462888,
+   "annual_buyback_usd": 19384636.284462888,
+   "annual_buyback_pct_of_mcap": 0.0033569661897248733,
+   "annual_near_bought_at_current_price": 4395609.134798841,
+   "value_supported_usd": 504000543.3960351,
+   "value_supported_per_near_usd": 0.40325302144025005,
+   "share_of_current_mcap_supported": 0.0872811209328467,
+   "buyback_vs_issuance": 0.13416597946420017
   },
   "bull": {
    "inputs": {
-    "volume_growth": 2.0,
-    "take_rate_multiplier": 1.25,
+    "volume_growth": 1.0,
+    "take_rate_multiplier": 1.35,
     "buyback_share": 1.0,
-    "multiple": 35,
+    "multiple": 37,
     "buyback_share_used": 1.0
    },
-   "annual_volume_usd": 142795603315.0,
-   "annual_captured_revenue_usd": 73263167.80034985,
-   "annual_buyback_usd": 73263167.80034985,
-   "annual_buyback_pct_of_mcap": 0.012659346386566513,
-   "annual_near_bought_at_current_price": 16575377.330395892,
-   "value_supported_usd": 2564210873.0122447,
-   "value_supported_per_near_usd": 2.051636244645096,
-   "share_of_current_mcap_supported": 0.443077123529828
+   "annual_volume_usd": 93941386289.33333,
+   "annual_captured_revenue_usd": 52338517.9680498,
+   "annual_buyback_usd": 52338517.9680498,
+   "annual_buyback_pct_of_mcap": 0.009063808712257159,
+   "annual_near_bought_at_current_price": 11868144.663956871,
+   "value_supported_usd": 1936525164.8178427,
+   "value_supported_per_near_usd": 1.5494221862261919,
+   "share_of_current_mcap_supported": 0.3353609223535149,
+   "buyback_vs_issuance": 0.3622481445533405
   }
  }
 }

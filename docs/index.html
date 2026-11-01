@@ -56,7 +56,16 @@
   <div class="card"><h2>Does volume move price? Weekly log-change correlation</h2>
     <table id="tRel"></table>
     <canvas id="cLag"></canvas>
-    <p>Correlation of weekly log change in Intents volume with NEAR's weekly log return, at lags of -4..+4 weeks (positive lag = volume leads price). Not controlled for BTC/ETH market moves yet.</p></div>
+    <p>Correlation of weekly log change in Intents volume with NEAR's weekly log return, at lags of -4..+4 weeks (positive lag = volume leads price). Raw, not market-adjusted: see the next card.</p></div>
+
+  <div class="card"><h2>Robustness: does the link survive a BTC/ETH market control?</h2>
+    <table id="tRob"></table>
+    <canvas id="cRoll"></canvas>
+    <p id="robNote"></p></div>
+
+  <div class="card"><h2>Buybacks vs new supply, and what the market pays for buybacks elsewhere</h2>
+    <table id="tIss"></table>
+    <p>Issuance is an upper bound: max annual rate × total supply × today's price. Bought-back NEAR is held, not burned. Comparables: market cap ÷ annualized 30-day holders revenue (buybacks), computed live from DefiLlama.</p></div>
 
   <div class="card"><h2>Bear / base / bull: how much of NEAR's market cap can Intents buybacks justify?</h2>
     <p style="margin-bottom:10px">Edit any cell; the results recompute. Defaults come from <code>model/assumptions.yaml</code>. Baseline from data: <span id="baseline"></span></p>
@@ -128,6 +137,24 @@ new Chart($("cLag"), { type:"bar", data: { labels: lags.map(l => l + "w"), datas
   { label:"All weeks", data: lags.map(l => R.volume_vs_price.lagged_corr[l]), backgroundColor:"#8a96a3" },
   { label:"Since buyback", data: lags.map(l => R.volume_vs_price_post_buyback.lagged_corr[l]), backgroundColor:"#00ec97" } ] },
   options: { scales: { y: { min:-1, max:1 } } } });
+
+// ---- robustness ----
+const RB = M.robustness;
+$("tRob").innerHTML = "<tr><th>Sample</th><th>weeks</th><th>raw corr</th><th>market-adj. corr</th><th>volume coef</th><th>t (Newey-West)</th></tr>" +
+  RB.samples.map(r => `<tr><td>${r.label}</td><td>${r.n_weeks}</td><td>${num(r.naive_corr_dvol_near)}</td><td>${num(r.corr_dvol_vs_market_adjusted_near)}</td><td>${num(r.dvol_coef_controlled,3)}</td><td class="${Math.abs(r.dvol_t_newey_west_controlled)>=2?"acc":""}">${num(r.dvol_t_newey_west_controlled)}</td></tr>`).join("");
+new Chart($("cRoll"), { type:"line", data: { labels: RB.rolling.map(r => r.week_end), datasets: [
+  { label:`Raw corr, rolling ${RB.rolling_window_weeks}w`, data: RB.rolling.map(r => r.naive_corr), borderColor:"#8a96a3", pointRadius:0 },
+  { label:`Market-adjusted corr, rolling ${RB.rolling_window_weeks}w`, data: RB.rolling.map(r => r.market_adjusted_corr), borderColor:"#00ec97", pointRadius:0 } ] },
+  options: { scales: { y: { min:-1, max:1 } } } });
+$("robNote").textContent = RB.method + " Weeks under the volume floor are dropped so the ~$1M/week launch weeks cannot dominate.";
+
+const IS = MO.issuance;
+$("tIss").innerHTML = `<tr><th>Item</th><th>Value</th></tr>
+  <tr><td>$NEAR buyback, annualized (30d)</td><td>${usd(MO.baseline.annual_buyback_usd_now)}</td></tr>
+  <tr><td>New NEAR issued per year at ${pct(IS.annual_issuance_rate,1)} max rate</td><td>${usd(IS.annual_issuance_usd_at_current_price)}</td></tr>
+  <tr><td>Buyback ÷ issuance</td><td class="warn">${num(IS.buyback_vs_issuance_now)}×</td></tr>
+  <tr><td>NEAR market cap ÷ annual buyback</td><td class="warn">${num(MO.baseline.market_implied_buyback_multiple,0)}×</td></tr>` +
+  MO.comparables.map(c => `<tr><td>${c.token} market cap ÷ annual buyback</td><td>${num(c.mcap_to_annual_buyback,1)}×</td></tr>`).join("");
 
 // ---- editable model (same formula as pipeline/model.py) ----
 const B = MO.baseline, names = Object.keys(MO.scenarios);

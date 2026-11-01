@@ -17,11 +17,16 @@ RAW = ROOT / "data" / "raw"
 UA = "near-intents-thesis/0.1 (+https://nearhackathon.com)"
 
 
-def _get(url, retries=3):
+def _get(url, retries=3, body=None):
     last = None
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+            headers = {"User-Agent": UA, "Accept": "application/json"}
+            data = None
+            if body is not None:  # POST with a JSON body (coins.llama.fi/mcaps)
+                headers["Content-Type"] = "application/json"
+                data = json.dumps(body).encode()
+            req = urllib.request.Request(url, data=data, headers=headers)
             with urllib.request.urlopen(req, timeout=60) as r:
                 return r.status, r.read()
         except Exception as e:  # network hiccup: back off and retry
@@ -51,7 +56,7 @@ def fetch_all(names=None):
         parts = []
         statuses = []
         for u in urls:
-            status, body = _get(u)
+            status, body = _get(u, body=src.get("body"))
             statuses.append(status)
             parts.append(json.loads(body))
         payload = parts[0] if len(parts) == 1 else {"chunks": parts}
@@ -60,6 +65,7 @@ def fetch_all(names=None):
         manifest["sources"][name] = {
             "file": f"data/raw/{name}.json",
             "urls": urls,
+            **({"method": "POST", "post_body": src["body"]} if src.get("method") == "POST" else {}),
             "provider": src["provider"],
             "what": src["what"],
             "http_status": statuses,

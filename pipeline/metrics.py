@@ -13,6 +13,8 @@ import statistics as st
 from datetime import date, timedelta
 from pathlib import Path
 
+from . import robustness
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "processed"
 BUYBACK_START = "2026-02-23"  # per DefiLlama near-intents fees adapter methodology
@@ -52,6 +54,8 @@ def weekly(rows):
             "holders_revenue": _sum(rs, "holders_revenue"),
             "price": next((r["price"] for r in reversed(rs) if r.get("price")), None),
             "tvl": next((r["tvl"] for r in reversed(rs) if r.get("tvl")), None),
+            "btc": next((r["btc"] for r in reversed(rs) if r.get("btc")), None),
+            "eth": next((r["eth"] for r in reversed(rs) if r.get("eth")), None),
         })
     return out
 
@@ -187,10 +191,12 @@ def build(daily):
         "take_rates": take,
         "value_capture": value_capture,
         "relations": relations,
+        "robustness": robustness.build(weeks, BUYBACK_START),
+        "comparables": daily.get("comparables", []),
         "weekly": weeks,
         "monthly": monthly(rows_to_end),
         "caveats": [
-            "Correlation is not causation; NEAR price is dominated by crypto-wide beta (BTC/ETH), which is not controlled for yet.",
+            "Correlation is not causation. BTC/ETH market beta is controlled for in `robustness`, but other common drivers (AI-token narrative, ETF listings, SVRN treasury buying) are not.",
             "Weekly sample is short (tens of observations); a t-stat near 2 is weak evidence.",
             "DefiLlama 'revenue' is NEAR/wNEAR swept into NEAR revenue wallets; sweep timing means a day's revenue can exceed that day's fees.",
             "The buyback program began 2026-02-23; earlier captured revenue stayed in the treasury.",

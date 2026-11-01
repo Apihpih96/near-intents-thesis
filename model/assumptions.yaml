@@ -1,31 +1,44 @@
 # Bear / base / bull value-capture model for NEAR Intents -> $NEAR.
 # Edit these numbers and re-run `python -m pipeline model` (or edit them live on the dashboard).
 #
+# value_supported = annual_volume*(1+volume_growth) * take_rate*take_rate_multiplier * buyback_share * multiple
+#
 # Baseline comes from the data (metrics.json), never typed in here:
 #   annual_volume  = last 30 days of Intents volume x 365/30
-#   take_rate      = NEAR captured revenue / volume over the last 90 days
-#   buyback_share  = buyback (holders revenue) / captured revenue over the last 90 days
+#   take_rate      = NEAR captured revenue / volume over the last 90 days (~4.1 bps on 2026-10-31 data)
+#   buyback_share  = buyback (holders revenue) / captured revenue over the last 90 days (1.0 since 2026-02-23)
 #
-# Scenario knobs (one-year forward):
-#   volume_growth        change in annual Intents volume vs. the 30-day run-rate (0.25 = +25%)
-#   take_rate_multiplier scales the observed take rate (fee cuts < 1, fee hikes / more 1Click share > 1)
-#   buyback_share        fraction of captured revenue that buys $NEAR; "observed" = use the data
-#   multiple             USD of NEAR market value the market assigns per USD of annual buyback
-#                        (like a P/E on the cash flow that reaches holders)
+# Every scenario number below has its reason and source next to it. Sources were read 2026-11-01.
+#  [S1] DefiLlama NEAR Intents methodology: https://defillama.com/protocol/near-intents
+#       "Since 2026-02-23, NEAR's captured Intents revenue is used to buy back $NEAR on the open market (not burned)".
+#  [S2] NEAR Foundation, "Evolving NEAR Tokenomics" (2026-02-23): https://www.near.org/blog/evolving-near-tokenomics
+#       Fee switch; protocol fee + distribution fees; buybacks are governance-discretionary, not guaranteed.
+#  [S3] NEAR Foundation, "The State of NEAR: Q2 2026" (2026-07-08): https://www.near.org/blog/the-state-of-near-q-2-2026
+#       Capture rate (revenue/fees): lifetime 11.5%, trailing 90d 17.9%, trailing 30d 30.5%; near.com routes 100% of its fees to buybacks.
+#  [S4] Phemex Academy (2026-09-28): https://phemex.com/academy/near-intents-explained-swap-fees
+#       Fee schedule from docs.near-intents.org/resources/fees: protocol fee 0.0001%; 1Click 0.20-0.25%, 0.01% on stable pairs.
+#  [S5] Stocktwits (2026-10-06): https://stocktwits.com/news-articles/markets/cryptocurrency/near-treasury-firm-ceo-says-buybacks-are-still-real-but-issuance-runs-six-times-higher/cZDteDIRBl3
+#       ~$1.9M buyback vs ~$13M new NEAR issued over 30 days; max annual issuance 2.5%, proposal to cut to 1.6%.
+#  [S6] Comparables computed live by this pipeline (metrics.json -> comparables): market cap / annualized 30d holders
+#       revenue (buybacks) for Hyperliquid (~26x), pump.fun (~6x), Jupiter (~37x) on 2026-11-01 data.
+#  [DATA] this repo's own metrics.json (monthly table).
+
+# NEAR protocol issuance, used to show whether buybacks offset new supply.
+annual_issuance_rate: 0.025   # [S5] current maximum annual issuance; a proposal would cut it to 0.016
 
 scenarios:
   bear:
-    volume_growth: -0.50
-    take_rate_multiplier: 0.75
-    buyback_share: 0.50      # e.g. part of revenue redirected away from buybacks
-    multiple: 10
+    volume_growth: -0.50       # [DATA] back to the ~$2B/month of Mar-Aug 2026 from the Sep-Oct ~$4-4.8B surge
+    take_rate_multiplier: 0.75 # [S4] mix shifts to keyed/stablecoin routes (0.01%) and partners keep more
+    buyback_share: 0.50        # [S2] buybacks are discretionary; governance redirects half to other treasury uses
+    multiple: 6                # [S6] pump.fun, the lowest buyback multiple among comparables
   base:
-    volume_growth: 0.25
-    take_rate_multiplier: 1.0
-    buyback_share: observed
-    multiple: 20
+    volume_growth: 0.0         # [DATA] hold the Oct 2026 30-day run-rate flat for a year
+    take_rate_multiplier: 1.0  # 90-day observed take rate
+    buyback_share: observed    # [S1] 100% of captured revenue since 2026-02-23
+    multiple: 26               # [S6] Hyperliquid, the largest buyback token, as the market's reference multiple
   bull:
-    volume_growth: 2.00
-    take_rate_multiplier: 1.25
-    buyback_share: 1.0
-    multiple: 35
+    volume_growth: 1.00        # [DATA] volume doubles; Intents volume grew ~12x YoY per revenue.near.org, so 2x is not extreme
+    take_rate_multiplier: 1.35 # [DATA][S3] Oct 2026 take rate (5.5 bps) is ~1.35x the 90-day 4.1 bps as capture rises
+    buyback_share: 1.0         # [S3] all captured revenue keeps buying NEAR
+    multiple: 37               # [S6] Jupiter, the highest buyback multiple among comparables
