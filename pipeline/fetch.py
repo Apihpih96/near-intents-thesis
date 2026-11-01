@@ -8,7 +8,6 @@ import hashlib
 import json
 import time
 import urllib.request
-from datetime import datetime, timezone
 from pathlib import Path
 
 from .sources import SOURCES
@@ -44,7 +43,7 @@ def urls_for(src, now=None):
 
 def fetch_all(names=None):
     RAW.mkdir(parents=True, exist_ok=True)
-    manifest = {"fetched_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "sources": {}}
+    manifest = {"fetched_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "sources": {}}
     for name, src in SOURCES.items():
         if names and name not in names:
             continue
