@@ -3,6 +3,9 @@
 An investment-thesis project for the NEAR HACKATHON 2026, **Investment Thesis** track (`thesis`).
 Track hints used: ONCHAIN DATA, DASHBOARDS, RESEARCH, NEAR INTENTS.
 
+**Live dashboard:** https://apihpih96.github.io/near-intents-thesis/  
+**Demo post on X:** https://x.com/Apihpih69/status/2117036976880877770
+
 **What it is:** a reproducible data pipeline, a static dashboard and an editable bear/base/bull model
 that follow every dollar of NEAR Intents swap volume down the value-capture chain and measure how much
 of it reaches $NEAR holders.
