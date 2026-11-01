@@ -1,0 +1,49 @@
+name: Refresh data daily
+
+# Re-fetches the keyless public sources, rebuilds metrics/model/dashboard,
+# and commits only if every test passes. No secrets are used.
+on:
+  schedule:
+    - cron: "30 0 * * *"   # 00:30 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Fetch live data and rebuild
+        run: python3 -m pipeline all
+      - name: Tests must pass before anything is committed
+        run: python3 -m unittest discover -s tests -v
+      - name: Commit refreshed data
+        id: commit
+        run: |
+          git add data docs/data.js
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No data changes."
+          else
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Daily data refresh ($(date -u +%Y-%m-%d))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rebuild GitHub Pages
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Pages build request failed; Pages will pick up the next push."

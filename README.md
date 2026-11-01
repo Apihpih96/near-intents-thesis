@@ -6,6 +6,8 @@ Track hints used: ONCHAIN DATA, DASHBOARDS, RESEARCH, NEAR INTENTS.
 **Live dashboard:** https://apihpih96.github.io/near-intents-thesis/  
 **Demo post on X:** https://x.com/Apihpih69/status/2117036976880877770
 
+The dashboard data refreshes daily via GitHub Actions (`.github/workflows/refresh-data.yml`: fetch, rebuild, commit only if all tests pass). Figures quoted in this README and `FINDINGS.md` are a snapshot with data through 2026-10-31.
+
 **What it is:** a reproducible data pipeline, a static dashboard and an editable bear/base/bull model
 that follow every dollar of NEAR Intents swap volume down the value-capture chain and measure how much
 of it reaches $NEAR holders.
