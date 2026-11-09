@@ -1,145 +1,145 @@
 {
- "as_of_last_full_day": "2026-11-07",
- "fetched_at_utc": "2026-11-08T06:32:21Z",
+ "as_of_last_full_day": "2026-11-08",
+ "fetched_at_utc": "2026-11-09T07:01:36Z",
  "current": {
-  "near_price_usd": 3.7,
-  "market_cap_usd": 4853401994.0,
-  "total_supply_near": 1311140192.4115915,
+  "near_price_usd": 3.53,
+  "market_cap_usd": 4634493186.0,
+  "total_supply_near": 1311216340.9783313,
   "circulating_supply_near": 1249836992.159308,
-  "total_txns": 5477137882,
-  "tps": 1,
+  "total_txns": 5477853459,
+  "tps": 16,
   "nodes_online": 371,
-  "volume_24h_usd": 255388962.0,
-  "change_24h_pct": -0.985
+  "volume_24h_usd": 479003830.0,
+  "change_24h_pct": -4.48662
  },
  "windows": {
   "7d": {
-   "volume": 906437455.0,
-   "fees": 1228761.0,
-   "revenue": 345041.0,
-   "holders_revenue": 345041.0
+   "volume": 912182473.0,
+   "fees": 1259850.0,
+   "revenue": 348016.0,
+   "holders_revenue": 348016.0
   },
   "30d": {
-   "volume": 3882727887.0,
-   "fees": 5753157.0,
-   "revenue": 1939872.0,
-   "holders_revenue": 1939872.0
+   "volume": 3714703671.0,
+   "fees": 5592680.0,
+   "revenue": 1858265.0,
+   "holders_revenue": 1858265.0
   },
   "90d": {
-   "volume": 11922214003.0,
-   "fees": 18108980.0,
-   "revenue": 4976253.0,
-   "holders_revenue": 4976253.0
+   "volume": 11934118651.0,
+   "fees": 18186707.0,
+   "revenue": 4994880.0,
+   "holders_revenue": 4994880.0
   },
   "365d": {
-   "volume": 32824233225.0,
-   "fees": 53609005.0,
-   "revenue": 9207358.05,
-   "holders_revenue": 7860338.05
+   "volume": 32788869425.0,
+   "fees": 53633453.0,
+   "revenue": 9239200.05,
+   "holders_revenue": 7892180.05
   },
   "all_time": {
-   "volume": 36917860339.0,
-   "fees": 59325020.98,
-   "revenue": 9630569.05,
-   "holders_revenue": 7860338.05
+   "volume": 37005533919.0,
+   "fees": 59504253.98,
+   "revenue": 9662411.05,
+   "holders_revenue": 7892180.05
   }
  },
  "take_rates": {
   "7d": {
-   "fees_per_volume": 0.0013555938065246873,
-   "revenue_per_volume": 0.0003806561590065803,
-   "revenue_per_fees": 0.2808039968716455,
+   "fees_per_volume": 0.0013811381355054823,
+   "revenue_per_volume": 0.00038152015665839263,
+   "revenue_per_fees": 0.27623605984839467,
    "buyback_per_revenue": 1.0
   },
   "30d": {
-   "fees_per_volume": 0.001481730671691544,
-   "revenue_per_volume": 0.0004996157486325541,
-   "revenue_per_fees": 0.33718391484883864,
+   "fees_per_volume": 0.001505552123487268,
+   "revenue_per_volume": 0.0005002458243189434,
+   "revenue_per_fees": 0.33226735661614826,
    "buyback_per_revenue": 1.0
   },
   "90d": {
-   "fees_per_volume": 0.0015189276081978747,
-   "revenue_per_volume": 0.0004173933632417452,
-   "revenue_per_fees": 0.2747947703294167,
+   "fees_per_volume": 0.0015239254386394151,
+   "revenue_per_volume": 0.00041853781968067346,
+   "revenue_per_fees": 0.27464455219958184,
    "buyback_per_revenue": 1.0
   },
   "365d": {
-   "fees_per_volume": 0.0016332142363395604,
-   "revenue_per_volume": 0.00028050489365239394,
-   "revenue_per_fees": 0.17175021342030133,
-   "buyback_per_revenue": 0.8537017901677018
+   "fees_per_volume": 0.0016357213267959453,
+   "revenue_per_volume": 0.00028177854900222747,
+   "revenue_per_fees": 0.17226562030231393,
+   "buyback_per_revenue": 0.854205992649764
   },
   "all_time": {
-   "fees_per_volume": 0.0016069463515828162,
-   "revenue_per_volume": 0.00026086476739352836,
-   "revenue_per_fees": 0.16233570407411596,
-   "buyback_per_revenue": 0.8161862512163806
+   "fees_per_volume": 0.0016079825820172352,
+   "revenue_per_volume": 0.00026110719199862604,
+   "revenue_per_fees": 0.1623818534595466,
+   "buyback_per_revenue": 0.8167920003775868
   }
  },
  "value_capture": {
-  "market_cap_usd": 4853401994.0,
+  "market_cap_usd": 4634493186.0,
   "circulating_supply_near": 1249836992.159308,
-  "annualized_volume_usd_from_30d": 47239855958.5,
-  "annualized_fees_usd_from_30d": 69996743.5,
-  "annualized_revenue_usd_from_30d": 23601776.0,
-  "annualized_buyback_usd_from_30d": 23601776.0,
-  "buyback_yield_on_mcap": 0.004862934500207815,
-  "price_to_annualized_revenue": 205.63715179739017,
-  "annualized_volume_per_usd_mcap": 9.73334910582311,
+  "annualized_volume_usd_from_30d": 45195561330.5,
+  "annualized_fees_usd_from_30d": 68044273.33333333,
+  "annualized_revenue_usd_from_30d": 22608890.833333332,
+  "annualized_buyback_usd_from_30d": 22608890.833333332,
+  "buyback_yield_on_mcap": 0.004878395528044117,
+  "price_to_annualized_revenue": 204.98542896970216,
+  "annualized_volume_per_usd_mcap": 9.75199650029219,
   "buyback_since": "2026-02-23",
-  "buyback_usd_since_start": 7860338.05,
-  "approx_near_bought_since_start": 3243320.884935293,
-  "approx_near_bought_pct_circulating": 0.0025949951115880315,
+  "buyback_usd_since_start": 7892180.05,
+  "approx_near_bought_since_start": 3251855.0788132814,
+  "approx_near_bought_pct_circulating": 0.0026018233571364724,
   "note": "approx_near_bought assumes each day's buyback USD was spent at that day's price; DefiLlama reports USD, not tokens."
  },
  "relations": {
   "volume_vs_price": {
-   "weekly_logchange_corr": -0.048529526287209884,
-   "n_weeks": 97,
+   "weekly_logchange_corr": -0.04726396960446659,
+   "n_weeks": 98,
    "lagged_corr": {
-    "-4": -0.1874103942803425,
-    "-3": 0.07202127324831288,
-    "-2": -0.010323820507281964,
-    "-1": 0.06475982555731187,
-    "0": -0.048529526287209884,
-    "1": 0.054161246245753476,
-    "2": -0.12007480150832775,
-    "3": -0.017542903868031454,
-    "4": 0.06729666877981598
+    "-4": -0.187443262230551,
+    "-3": 0.07245650850637837,
+    "-2": -0.009828147471574143,
+    "-1": 0.0648306572578024,
+    "0": -0.04726396960446659,
+    "1": 0.052094793565763735,
+    "2": -0.11334472361001412,
+    "3": -0.007094157539638737,
+    "4": 0.0630911083997266
    },
    "regression_price_on_flow": {
-    "slope": -0.01546447961156507,
-    "intercept": -0.0001885194180060788,
-    "r": -0.048529526287209884,
-    "r2": 0.002355114921660995,
-    "n": 97,
-    "t_stat": -0.47356529143441534
+    "slope": -0.015179173658086095,
+    "intercept": -0.0019524534636043795,
+    "r": -0.04726396960446659,
+    "r2": 0.0022338828227719417,
+    "n": 98,
+    "t_stat": -0.46360854809623125
    },
-   "log_level_corr_SPURIOUS_RISK": -0.5371772286488431
+   "log_level_corr_SPURIOUS_RISK": -0.5201680710459938
   },
   "revenue_vs_price": {
-   "weekly_logchange_corr": 0.15184819909911762,
-   "n_weeks": 46,
+   "weekly_logchange_corr": 0.1561230037642789,
+   "n_weeks": 47,
    "lagged_corr": {
-    "-4": -0.1388247590309737,
-    "-3": 0.03335704277209905,
-    "-2": 0.2068174193564522,
-    "-1": -0.04644525779097334,
-    "0": 0.15184819909911762,
-    "1": -0.1485257117730002,
-    "2": -0.16666492935481744,
-    "3": -0.05700653433836672,
-    "4": 0.0059298861789282035
+    "-4": -0.14114003809778758,
+    "-3": 0.036867818792537636,
+    "-2": 0.20892715671828735,
+    "-1": -0.04544227571513644,
+    "0": 0.1561230037642789,
+    "1": -0.1452075547071461,
+    "2": -0.1584530805540641,
+    "3": -0.05061591144449043,
+    "4": 0.008708928399804904
    },
    "regression_price_on_flow": {
-    "slope": 0.012435064071950804,
-    "intercept": 0.007786837688567419,
-    "r": 0.15184819909911762,
-    "r2": 0.023057875569645263,
-    "n": 46,
-    "t_stat": 1.0190642487437809
+    "slope": 0.012965928925037248,
+    "intercept": 0.0039293952474681905,
+    "r": 0.1561230037642789,
+    "r2": 0.024374392304381043,
+    "n": 47,
+    "t_stat": 1.060306832167974
    },
-   "log_level_corr_SPURIOUS_RISK": 0.157176167873273
+   "log_level_corr_SPURIOUS_RISK": 0.17148834365071616
   },
   "volume_vs_price_pre_buyback": {
    "weekly_logchange_corr": -0.13602685607651124,
@@ -166,28 +166,28 @@
    "log_level_corr_SPURIOUS_RISK": -0.7836206338785726
   },
   "volume_vs_price_post_buyback": {
-   "weekly_logchange_corr": 0.3476511187789451,
-   "n_weeks": 35,
+   "weekly_logchange_corr": 0.3334027235410827,
+   "n_weeks": 36,
    "lagged_corr": {
-    "-4": -0.23776574989569346,
-    "-3": -0.22766962170499264,
-    "-2": 0.1354032761641747,
-    "-1": -0.031230513004569957,
-    "0": 0.3476511187789451,
-    "1": -0.12471387713578219,
-    "2": 0.33602756882568224,
-    "3": 0.05311205101739085,
-    "4": 0.017550932821854163
+    "-4": -0.23645667956435837,
+    "-3": -0.22783577071214023,
+    "-2": 0.13225367257424409,
+    "-1": -0.032272215823803525,
+    "0": 0.3334027235410827,
+    "1": -0.14303217058712803,
+    "2": 0.3524030284193376,
+    "3": 0.11010044251565321,
+    "4": -0.021109340708857113
    },
    "regression_price_on_flow": {
-    "slope": 0.2598599025572897,
-    "intercept": 0.033965197251928265,
-    "r": 0.3476511187789451,
-    "r2": 0.1208613003882522,
-    "n": 35,
-    "t_stat": 2.1299622297015337
+    "slope": 0.2561829388246986,
+    "intercept": 0.028028217183556234,
+    "r": 0.3334027235410827,
+    "r2": 0.11115737606461161,
+    "n": 36,
+    "t_stat": 2.062035630731204
    },
-   "log_level_corr_SPURIOUS_RISK": 0.7928130484337577
+   "log_level_corr_SPURIOUS_RISK": 0.8015090064692273
   }
  },
  "robustness": {
@@ -196,213 +196,213 @@
    {
     "label": "all weeks, volume >= $0M/week",
     "first_week": "2024-12-23",
-    "last_week": "2026-10-26",
-    "n_weeks": 97,
-    "naive_corr_dvol_near": -0.048529526287209884,
-    "market_beta": 1.2000921703878007,
-    "market_model_r2": 0.3805650011127396,
-    "corr_dvol_vs_market_adjusted_near": 0.03636985481241816,
-    "dvol_coef_controlled": 0.009266496709218872,
-    "dvol_t_newey_west_controlled": 0.4526155508727266,
-    "dvol_t_newey_west_btc_eth": 0.5577344590481986,
-    "corr_dvol_vs_market": -0.12506757775686883,
+    "last_week": "2026-11-02",
+    "n_weeks": 98,
+    "naive_corr_dvol_near": -0.04726396960446659,
+    "market_beta": 1.2038479414435033,
+    "market_model_r2": 0.3771077597707393,
+    "corr_dvol_vs_market_adjusted_near": 0.03731850338362004,
+    "dvol_coef_controlled": 0.009609041723735846,
+    "dvol_t_newey_west_controlled": 0.4700519457756836,
+    "dvol_t_newey_west_btc_eth": 0.5456239651184831,
+    "corr_dvol_vs_market": -0.12492781470588289,
     "naive_regression": {
-     "n": 97,
-     "r2": 0.0023551149216609613,
+     "n": 98,
+     "r2": 0.0022338828227719265,
      "coef": {
-      "intercept": -0.0001885194180060788,
-      "dvol": -0.015464479611565067
+      "intercept": -0.0019524534636043793,
+      "dvol": -0.015179173658086093
      },
      "t_plain": {
-      "intercept": -0.013247889700869984,
-      "dvol": -0.47356529143441534
+      "intercept": -0.13754314455741323,
+      "dvol": -0.4636085480962311
      },
      "t_newey_west": {
-      "intercept": -0.013427257244463487,
-      "dvol": -0.5249115234066682
+      "intercept": -0.13897363413358485,
+      "dvol": -0.5148988662041023
      }
     },
     "controlled_regression": {
-     "n": 97,
-     "r2": 0.3813973890058717,
+     "n": 98,
+     "r2": 0.3779889969724983,
      "coef": {
-      "intercept": 0.001945245210292973,
-      "mkt": 1.2071672484476121,
-      "dvol": 0.009266496709218872
+      "intercept": 0.0003422034569250162,
+      "mkt": 1.2111755150056125,
+      "dvol": 0.009609041723735846
      },
      "t_plain": {
-      "intercept": 0.172629090518385,
-      "mkt": 7.589302732591776,
-      "dvol": 0.35564845785543664
+      "intercept": 0.030361783993199117,
+      "mkt": 7.575568318740963,
+      "dvol": 0.36686744947375316
      },
      "t_newey_west": {
-      "intercept": 0.16817280637729315,
-      "mkt": 8.644773949402426,
-      "dvol": 0.4526155508727266
+      "intercept": 0.02962177812084389,
+      "mkt": 8.636805617665713,
+      "dvol": 0.4700519457756836
      }
     },
     "controlled_regression_btc_eth": {
-     "n": 97,
-     "r2": 0.38166500573913775,
+     "n": 98,
+     "r2": 0.37808346617883937,
      "coef": {
-      "intercept": 0.0018401291179563674,
-      "btc": 0.5298723904114376,
-      "eth": 0.646065806661744,
-      "dvol": 0.010766183022691056
+      "intercept": 0.00027159819745274866,
+      "btc": 0.5615298992112283,
+      "eth": 0.6309950328504187,
+      "dvol": 0.010507273731635534
      },
      "t_plain": {
-      "intercept": 0.16229130894121985,
-      "btc": 1.4092234066417004,
-      "eth": 2.854457197891706,
-      "dvol": 0.3953046907407746
+      "intercept": 0.023939500156723633,
+      "btc": 1.4880431184090952,
+      "eth": 2.7760021248324294,
+      "dvol": 0.3837414055197362
      },
      "t_newey_west": {
-      "intercept": 0.15744413576733213,
-      "btc": 2.0231652905357187,
-      "eth": 5.145393562672968,
-      "dvol": 0.5577344590481986
+      "intercept": 0.023250377572333333,
+      "btc": 2.1314816323369197,
+      "eth": 4.938088544183449,
+      "dvol": 0.5456239651184831
      }
     }
    },
    {
     "label": "all weeks, volume >= $25M/week",
     "first_week": "2025-06-23",
-    "last_week": "2026-10-26",
-    "n_weeks": 71,
-    "naive_corr_dvol_near": 0.17353766143682062,
-    "market_beta": 1.1171723424731903,
-    "market_model_r2": 0.3155098364471264,
-    "corr_dvol_vs_market_adjusted_near": 0.1962177652244517,
-    "dvol_coef_controlled": 0.07426448541162381,
-    "dvol_t_newey_west_controlled": 1.7610683852317703,
-    "dvol_t_newey_west_btc_eth": 1.7295771334684054,
-    "corr_dvol_vs_market": 0.019937615900141918,
+    "last_week": "2026-11-02",
+    "n_weeks": 72,
+    "naive_corr_dvol_near": 0.17155553831173356,
+    "market_beta": 1.1232187419226332,
+    "market_model_r2": 0.311711512536089,
+    "corr_dvol_vs_market_adjusted_near": 0.19336783217392478,
+    "dvol_coef_controlled": 0.07425110567964123,
+    "dvol_t_newey_west_controlled": 1.7606142067742863,
+    "dvol_t_newey_west_btc_eth": 1.7160689232604145,
+    "corr_dvol_vs_market": 0.019937777329964938,
     "naive_regression": {
-     "n": 71,
-     "r2": 0.030115319936960705,
+     "n": 72,
+     "r2": 0.0294313027254286,
      "coef": {
-      "intercept": 0.00824701934526564,
-      "dvol": 0.07935609996821276
+      "intercept": 0.005703396918873256,
+      "dvol": 0.07937166926112472
      },
      "t_plain": {
-      "intercept": 0.4914071600721307,
-      "dvol": 1.4637207729519681
+      "intercept": 0.34053585435697475,
+      "dvol": 1.45693649698986
      },
      "t_newey_west": {
-      "intercept": 0.505936678653306,
-      "dvol": 1.8534747032797096
+      "intercept": 0.348453116578321,
+      "dvol": 1.8419036663299242
      }
     },
     "controlled_regression": {
-     "n": 71,
-     "r2": 0.34187415386726727,
+     "n": 72,
+     "r2": 0.3374576234109177,
      "coef": {
-      "intercept": 0.01070109781611535,
-      "mkt": 1.1107324064984774,
-      "dvol": 0.07426448541162381
+      "intercept": 0.008370215829582075,
+      "mkt": 1.1167813964707602,
+      "dvol": 0.07425110567964123
      },
      "t_plain": {
-      "intercept": 0.7680668814971631,
-      "mkt": 5.675568466619556,
-      "dvol": 1.650472333742907
+      "intercept": 0.6002056213899931,
+      "mkt": 5.663848511068649,
+      "dvol": 1.6374706798269067
      },
      "t_newey_west": {
-      "intercept": 0.7617320266763467,
-      "mkt": 6.403532962405264,
-      "dvol": 1.7610683852317703
+      "intercept": 0.5949214846018012,
+      "mkt": 6.4422292348696,
+      "dvol": 1.7606142067742863
      }
     },
     "controlled_regression_btc_eth": {
-     "n": 71,
-     "r2": 0.34662176900315067,
+     "n": 72,
+     "r2": 0.34321953001972727,
      "coef": {
-      "intercept": 0.012090351008830963,
-      "btc": 0.8968964180973543,
-      "eth": 0.33868086712947854,
-      "dvol": 0.07134938874878032
+      "intercept": 0.009987578901051265,
+      "btc": 0.9383600399345873,
+      "eth": 0.31716612016436196,
+      "dvol": 0.07100753494668811
      },
      "t_plain": {
-      "intercept": 0.8558691900679055,
-      "btc": 1.7965256182981293,
-      "eth": 1.0398016529399265,
-      "dvol": 1.57297691992162
+      "intercept": 0.7062144987822974,
+      "btc": 1.8700304853705751,
+      "eth": 0.9681670733754016,
+      "dvol": 1.5547406268561157
      },
      "t_newey_west": {
-      "intercept": 0.8201815395927897,
-      "btc": 2.179566110492461,
-      "eth": 1.3563293111495531,
-      "dvol": 1.7295771334684054
+      "intercept": 0.676479628757589,
+      "btc": 2.2407935671467825,
+      "eth": 1.2275371011682223,
+      "dvol": 1.7160689232604145
      }
     }
    },
    {
     "label": "all weeks, volume >= $100M/week",
     "first_week": "2025-09-15",
-    "last_week": "2026-10-26",
-    "n_weeks": 59,
-    "naive_corr_dvol_near": 0.210945583692892,
-    "market_beta": 1.0579904819332635,
-    "market_model_r2": 0.2590146730210442,
-    "corr_dvol_vs_market_adjusted_near": 0.22824928045382703,
-    "dvol_coef_controlled": 0.1002065269016856,
-    "dvol_t_newey_west_controlled": 1.7138121807939957,
-    "dvol_t_newey_west_btc_eth": 1.5797565255671593,
-    "corr_dvol_vs_market": 0.02842692262525162,
+    "last_week": "2026-11-02",
+    "n_weeks": 60,
+    "naive_corr_dvol_near": 0.2078150220091543,
+    "market_beta": 1.0611549126201494,
+    "market_model_r2": 0.2540751482969389,
+    "corr_dvol_vs_market_adjusted_near": 0.22404615385546872,
+    "dvol_coef_controlled": 0.09994546984930944,
+    "dvol_t_newey_west_controlled": 1.7127289393606098,
+    "dvol_t_newey_west_btc_eth": 1.5538992405926033,
+    "corr_dvol_vs_market": 0.028395924804740395,
     "naive_regression": {
-     "n": 59,
-     "r2": 0.04449803927953477,
+     "n": 60,
+     "r2": 0.0431870833726653,
      "coef": {
-      "intercept": 0.004198078877438536,
-      "dvol": 0.10749818593750417
+      "intercept": 0.0012035910040904892,
+      "dvol": 0.10725182602061384
      },
      "t_plain": {
-      "intercept": 0.22267150250669124,
-      "dvol": 1.629266298061483
+      "intercept": 0.06406996789507871,
+      "dvol": 1.6179959104193697
      },
      "t_newey_west": {
-      "intercept": 0.22716797636470837,
-      "dvol": 2.142731435017942
+      "intercept": 0.06500195741342213,
+      "dvol": 2.1201139924929846
      }
     },
     "controlled_regression": {
-     "n": 59,
-     "r2": 0.29764954995941306,
+     "n": 60,
+     "r2": 0.29154831436232664,
      "coef": {
-      "intercept": 0.014472813371331508,
-      "mkt": 1.04637025160394,
-      "dvol": 0.1002065269016856
+      "intercept": 0.011602892885472869,
+      "mkt": 1.0495780982646012,
+      "dvol": 0.09994546984930944
      },
      "t_plain": {
-      "intercept": 0.8788873188231607,
-      "mkt": 4.492699204719267,
-      "dvol": 1.7551201312308482
+      "intercept": 0.7044464717473293,
+      "mkt": 4.470171761265983,
+      "dvol": 1.7363709154149303
      },
      "t_newey_west": {
-      "intercept": 0.8587290957340121,
-      "mkt": 4.850074112906798,
-      "dvol": 1.7138121807939957
+      "intercept": 0.6878845796425699,
+      "mkt": 4.900999717508302,
+      "dvol": 1.7127289393606098
      }
     },
     "controlled_regression_btc_eth": {
-     "n": 59,
-     "r2": 0.32166569952826063,
+     "n": 60,
+     "r2": 0.32075771248838936,
      "coef": {
-      "intercept": 0.012197095467084777,
-      "btc": 1.6723499245706233,
-      "eth": -0.3243990220885173,
-      "dvol": 0.09014464708726275
+      "intercept": 0.009475954027122237,
+      "btc": 1.7981576839845865,
+      "eth": -0.414787297220986,
+      "dvol": 0.08883009670216543
      },
      "t_plain": {
-      "intercept": 0.7432312890397632,
-      "btc": 2.0110713109672202,
-      "eth": -0.5246833030517928,
-      "dvol": 1.5794262575488496
+      "intercept": 0.5803215096884873,
+      "btc": 2.1698099244807647,
+      "eth": -0.6728402139264144,
+      "dvol": 1.5499591423374108
      },
      "t_newey_west": {
-      "intercept": 0.7646013198283464,
-      "btc": 2.393769151358517,
-      "eth": -0.6183535075984358,
-      "dvol": 1.5797565255671593
+      "intercept": 0.5934696024027848,
+      "btc": 2.5375911674300666,
+      "eth": -0.7744320317495957,
+      "dvol": 1.5538992405926033
      }
     }
    },
@@ -480,71 +480,71 @@
    {
     "label": "post-buyback (>= 2026-02-23)",
     "first_week": "2026-02-23",
-    "last_week": "2026-10-26",
-    "n_weeks": 36,
-    "naive_corr_dvol_near": 0.3517069900621682,
-    "market_beta": 0.9562475895686535,
-    "market_model_r2": 0.18510223388004776,
-    "corr_dvol_vs_market_adjusted_near": 0.32094873405184254,
-    "dvol_coef_controlled": 0.21220308753267306,
-    "dvol_t_newey_west_controlled": 1.7438024897135735,
-    "dvol_t_newey_west_btc_eth": 1.7603548087350251,
-    "corr_dvol_vs_market": 0.1440634465554133,
+    "last_week": "2026-11-02",
+    "n_weeks": 37,
+    "naive_corr_dvol_near": 0.3393324489660989,
+    "market_beta": 0.9791508760426145,
+    "market_model_r2": 0.18386412575252242,
+    "corr_dvol_vs_market_adjusted_near": 0.3075636086056863,
+    "dvol_coef_controlled": 0.20925659123184023,
+    "dvol_t_newey_west_controlled": 1.726574846538711,
+    "dvol_t_newey_west_btc_eth": 1.7456695221225487,
+    "corr_dvol_vs_market": 0.14337602382199352,
     "naive_regression": {
-     "n": 36,
-     "r2": 0.12369780685859011,
+     "n": 37,
+     "r2": 0.11514651092132999,
      "coef": {
-      "intercept": 0.033264596430647435,
-      "dvol": 0.25225347128778514
+      "intercept": 0.0275068092169709,
+      "dvol": 0.2503039266688113
      },
      "t_plain": {
-      "intercept": 1.4219216235348202,
-      "dvol": 2.1907534741421477
+      "intercept": 1.169651531603434,
+      "dvol": 2.1341440488009593
      },
      "t_newey_west": {
-      "intercept": 1.5988643424421112,
-      "dvol": 2.058810981022605
+      "intercept": 1.2767112387181583,
+      "dvol": 2.038077841415972
      }
     },
     "controlled_regression": {
-     "n": 36,
-     "r2": 0.2708223553370377,
+     "n": 37,
+     "r2": 0.26268714335300425,
      "coef": {
-      "intercept": 0.031143297300303817,
-      "mkt": 0.8615118453677006,
-      "dvol": 0.21220308753267306
+      "intercept": 0.025779763292236097,
+      "mkt": 0.8862725191821155,
+      "dvol": 0.20925659123184023
      },
      "t_plain": {
-      "intercept": 1.436723606069055,
-      "mkt": 2.58037525632331,
-      "dvol": 1.9696165556314058
+      "intercept": 1.1830683651272094,
+      "mkt": 2.608371074550076,
+      "dvol": 1.9065143725958051
      },
      "t_newey_west": {
-      "intercept": 1.5009770212679474,
-      "mkt": 2.3580987093531776,
-      "dvol": 1.7438024897135735
+      "intercept": 1.2161546497092677,
+      "mkt": 2.4730985271755075,
+      "dvol": 1.726574846538711
      }
     },
     "controlled_regression_btc_eth": {
-     "n": 36,
-     "r2": 0.3045545138298673,
+     "n": 37,
+     "r2": 0.3068162434805123,
      "coef": {
-      "intercept": 0.029854113238033362,
-      "btc": 1.895120799772107,
-      "eth": -0.6848040020997731,
-      "dvol": 0.21612210538189808
+      "intercept": 0.02506987955444851,
+      "btc": 2.1435999444839635,
+      "eth": -0.8554924459783911,
+      "dvol": 0.21424565259743142
      },
      "t_plain": {
-      "intercept": 1.3871180187249903,
-      "btc": 1.596567428833799,
-      "eth": -0.7520379819129023,
-      "dvol": 2.0218279393348753
+      "intercept": 1.168662663367164,
+      "btc": 1.808860975823882,
+      "eth": -0.9386260196966716,
+      "dvol": 1.982311119911551
      },
      "t_newey_west": {
-      "intercept": 1.5294514572301001,
-      "btc": 2.3176601272457327,
-      "eth": -1.25588962875515,
-      "dvol": 1.7603548087350251
+      "intercept": 1.2582893177076555,
+      "btc": 2.4844735898979597,
+      "eth": -1.4502107025739204,
+      "dvol": 1.7456695221225487
      }
     }
    },
@@ -1125,6 +1125,13 @@
     "market_adjusted_corr": 0.3000429355593815,
     "dvol_t_nw": 1.5026501672416757,
     "market_beta": 0.970939605853391
+   },
+   {
+    "week_end": "2026-11-02",
+    "naive_corr": 0.35021445567534143,
+    "market_adjusted_corr": 0.2761799589191963,
+    "dvol_t_nw": 1.4388022198985453,
+    "market_beta": 0.9748571533371395
    }
   ]
  },
@@ -1132,29 +1139,29 @@
   {
    "token": "Hyperliquid",
    "gecko_id": "coingecko:hyperliquid",
-   "market_cap_usd": 18506189580.642685,
-   "holders_revenue_30d_usd": 66841763.0,
-   "annualized_holders_revenue_usd": 813241449.8333334,
-   "mcap_to_annual_buyback": 22.756082568633662,
-   "last_day": "2026-11-07"
+   "market_cap_usd": 17728810233.244934,
+   "holders_revenue_30d_usd": 67024989.0,
+   "annualized_holders_revenue_usd": 815470699.5,
+   "mcap_to_annual_buyback": 21.74058521552672,
+   "last_day": "2026-11-08"
   },
   {
    "token": "pump.fun",
    "gecko_id": "coingecko:pump-fun",
-   "market_cap_usd": 1683956511.0367908,
-   "holders_revenue_30d_usd": 23790374.0,
-   "annualized_holders_revenue_usd": 289449550.3333333,
-   "mcap_to_annual_buyback": 5.81778934911983,
-   "last_day": "2026-11-07"
+   "market_cap_usd": 1626811834.1921828,
+   "holders_revenue_30d_usd": 23160024.0,
+   "annualized_holders_revenue_usd": 281780292.0,
+   "mcap_to_annual_buyback": 5.773334333091623,
+   "last_day": "2026-11-08"
   },
   {
    "token": "Jupiter",
    "gecko_id": "coingecko:jupiter-exchange-solana",
-   "market_cap_usd": 800851513.5690619,
-   "holders_revenue_30d_usd": 1883475.68,
-   "annualized_holders_revenue_usd": 22915620.77333333,
-   "mcap_to_annual_buyback": 34.94784284879616,
-   "last_day": "2026-11-07"
+   "market_cap_usd": 771970889.4584204,
+   "holders_revenue_30d_usd": 1826865.32,
+   "annualized_holders_revenue_usd": 22226861.393333334,
+   "mcap_to_annual_buyback": 34.731439396565605,
+   "last_day": "2026-11-08"
   }
  ],
  "weekly": [
@@ -2235,6 +2242,17 @@
    "tvl": 201698869.0,
    "btc": 77474.07610954811,
    "eth": 2254.1273622001104
+  },
+  {
+   "week": "2026-11-02",
+   "volume": 912182473.0,
+   "fees": 1259850.0,
+   "revenue": 348016.0,
+   "holders_revenue": 348016.0,
+   "price": 3.732029294711837,
+   "tvl": 175085497.0,
+   "btc": 75776.37720009114,
+   "eth": 2237.0549468296335
   }
  ],
  "monthly": [
@@ -2447,12 +2465,12 @@
   },
   {
    "month": "2026-11",
-   "days": 7,
-   "volume": 906437455.0,
-   "fees": 1228761.0,
-   "revenue": 345041.0,
-   "holders_revenue": 345041.0,
-   "avg_price": 3.9695365465738806
+   "days": 8,
+   "volume": 994111035.0,
+   "fees": 1407994.0,
+   "revenue": 376883.0,
+   "holders_revenue": 376883.0,
+   "avg_price": 3.939848140091125
   }
  ],
  "caveats": [
