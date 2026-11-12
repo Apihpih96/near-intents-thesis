@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-11T06:57:01Z",
+  "fetched_at_utc": "2026-11-12T07:33:32Z",
   "sources": {
     "intents_volume": {
       "file": "data/raw/intents_volume.json",
@@ -11,8 +11,8 @@
       "http_status": [
         200
       ],
-      "sha256": "d32f69f397583d6f9cc47f5ee23039452d597c0b285f04f024227abb3e816527",
-      "bytes": 50512
+      "sha256": "79b17f66670633b18c28c8cfe8bd53c7c517b9f356f72bfd4c9e22e5073990a8",
+      "bytes": 50589
     },
     "intents_fees": {
       "file": "data/raw/intents_fees.json",
@@ -24,8 +24,8 @@
       "http_status": [
         200
       ],
-      "sha256": "ae64aac69f5c6a07a4fb61562ba83e41d965396128e6bce6331388c8cf3a8ced",
-      "bytes": 39001
+      "sha256": "935c9b6241e4ef73445a2e5d885f901b0317379abc009adcac535f871102131c",
+      "bytes": 39072
     },
     "intents_revenue": {
       "file": "data/raw/intents_revenue.json",
@@ -37,8 +37,8 @@
       "http_status": [
         200
       ],
-      "sha256": "876477ab73b515b4b253dd3b7fb25b6c03e97a0ef56cc7ad06dddc4ae17a007c",
-      "bytes": 36581
+      "sha256": "2492edd9cdb04a64cc4786ed0eba9098efbcdeaff0e0c79871c9fd51d9646900",
+      "bytes": 36650
     },
     "intents_holders_revenue": {
       "file": "data/raw/intents_holders_revenue.json",
@@ -50,8 +50,8 @@
       "http_status": [
         200
       ],
-      "sha256": "bd3baa55d06b2d621ec6e7e779a165a6ee20037cfaaca9bf6a29403183f45176",
-      "bytes": 36389
+      "sha256": "2c01c1495dfc1dddcf9c5c11ecdac2ee09c7a759f0b5211e21f4e352907f29de",
+      "bytes": 36460
     },
     "near_price": {
       "file": "data/raw/near_price.json",
@@ -65,8 +65,8 @@
         200,
         200
       ],
-      "sha256": "4d9678e6a047e7e157e3f860a0af7de8e6da524ba8cb7fe42114f7ee07495ffa",
-      "bytes": 33077
+      "sha256": "15f416b34bec161bd10e3fe784b9cd4f7029ae21766c79bfaab17a0574cec48e",
+      "bytes": 33129
     },
     "btc_price": {
       "file": "data/raw/btc_price.json",
@@ -80,8 +80,8 @@
         200,
         200
       ],
-      "sha256": "45db7ea675d96d4c74fd5b0f7a3c506187f68f4a6c02c340b1e3f4e3c3799648",
-      "bytes": 33039
+      "sha256": "4958b9752cf51326355270995cba0f2727e6217acfeb9f2e76ae446819ec398f",
+      "bytes": 33090
     },
     "eth_price": {
       "file": "data/raw/eth_price.json",
@@ -95,8 +95,8 @@
         200,
         200
       ],
-      "sha256": "d21dd326e2da7fce2730a07bf5e7ef41b2cb933279c712d109e00b49dff8c1e5",
-      "bytes": 33606
+      "sha256": "a4d1157272afc75de449cb2f7f3900d2a2091bae0b95a1f792727d4d5d74e21b",
+      "bytes": 33657
     },
     "comparables_mcap": {
       "file": "data/raw/comparables_mcap.json",
@@ -116,8 +116,8 @@
       "http_status": [
         200
       ],
-      "sha256": "1e4f886a6c9bb751e684aab8a85b822a470e7366f0262894b189ef9c0d07828b",
-      "bytes": 234
+      "sha256": "db81398ee90ee14c9a473b61fd047eedf0f6f675c62f97f414128f334eb43638",
+      "bytes": 233
     },
     "comp_hyperliquid_holders_revenue": {
       "file": "data/raw/comp_hyperliquid_holders_revenue.json",
@@ -129,8 +129,8 @@
       "http_status": [
         200
       ],
-      "sha256": "012c94adf63f0dd22a166156cbafa0e64fb88fd9d5e716494ac9d54374537f9c",
-      "bytes": 24409
+      "sha256": "a248df3c18ad7364adbb7504428bc5545b98050261eaf3f6bc5edfe7f07e940e",
+      "bytes": 24437
     },
     "comp_pumpfun_holders_revenue": {
       "file": "data/raw/comp_pumpfun_holders_revenue.json",
@@ -142,8 +142,8 @@
       "http_status": [
         200
       ],
-      "sha256": "e347d6f79aa4b579ef749474519fc486adae1263e8ba0033163d8ce54618a688",
-      "bytes": 17326
+      "sha256": "ca75084d5ff4adc2c9518f8f86a219d422619e0f53c2ca3e0400e93ac857fd9c",
+      "bytes": 17345
     },
     "comp_jupiter_holders_revenue": {
       "file": "data/raw/comp_jupiter_holders_revenue.json",
@@ -155,8 +155,8 @@
       "http_status": [
         200
       ],
-      "sha256": "161ab60ee3a0142f87278eb8d0bb7cf33b6669d12ec720cda36fd283e5ef2e35",
-      "bytes": 53661
+      "sha256": "6e36cafea1e1dcdf4ccd14924683aa3212c27d728050cb04312a8e5542d1a188",
+      "bytes": 56259
     },
     "nearblocks_stats": {
       "file": "data/raw/nearblocks_stats.json",
@@ -168,8 +168,8 @@
       "http_status": [
         200
       ],
-      "sha256": "5d03f13b500c3f39d94ec387ecdf3297ac6078457e2344743ce80f64fb100953",
-      "bytes": 480
+      "sha256": "11137b8d913d982c334d1da0f2b035610535c9abcb3c3fe56c8edaab67641d07",
+      "bytes": 479
     },
     "near_chain_tvl": {
       "file": "data/raw/near_chain_tvl.json",
@@ -181,8 +181,8 @@
       "http_status": [
         200
       ],
-      "sha256": "7ea06e45509f345f070d0b861e0306a8b27b78121180526e1aee1fb8ada8520c",
-      "bytes": 67996
+      "sha256": "8c9a21362e9a351157db24769cf49fe1acd9180c1690d2e5f54b9f87c6c20cef",
+      "bytes": 68032
     }
   }
 }

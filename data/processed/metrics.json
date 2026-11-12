@@ -1,95 +1,95 @@
 {
- "as_of_last_full_day": "2026-11-10",
- "fetched_at_utc": "2026-11-11T06:57:01Z",
+ "as_of_last_full_day": "2026-11-11",
+ "fetched_at_utc": "2026-11-12T07:33:32Z",
  "current": {
-  "near_price_usd": 3.61,
-  "market_cap_usd": 4728207479.0,
-  "total_supply_near": 1311395095.32915,
+  "near_price_usd": 3.52,
+  "market_cap_usd": 4613252318.0,
+  "total_supply_near": 1311498655.5741823,
   "circulating_supply_near": 1249836992.159308,
-  "total_txns": 5479742242,
-  "tps": 12,
+  "total_txns": 5480632190,
+  "tps": 8,
   "nodes_online": 371,
-  "volume_24h_usd": 590134067.0,
-  "change_24h_pct": -0.94717
+  "volume_24h_usd": 489894043.0,
+  "change_24h_pct": -2.21747
  },
  "windows": {
   "7d": {
-   "volume": 937972093.0,
-   "fees": 1178862.0,
-   "revenue": 388335.0,
-   "holders_revenue": 388335.0
+   "volume": 907115417.0,
+   "fees": 1449290.0,
+   "revenue": 389761.0,
+   "holders_revenue": 389761.0
   },
   "30d": {
-   "volume": 3757732084.0,
-   "fees": 5458382.0,
-   "revenue": 1815241.0,
-   "holders_revenue": 1815241.0
+   "volume": 3731354987.0,
+   "fees": 5781901.0,
+   "revenue": 1802996.0,
+   "holders_revenue": 1802996.0
   },
   "90d": {
-   "volume": 12101162919.0,
-   "fees": 18255054.0,
-   "revenue": 5075282.0,
-   "holders_revenue": 5075282.0
+   "volume": 12144529308.0,
+   "fees": 18714356.0,
+   "revenue": 5116881.0,
+   "holders_revenue": 5116881.0
   },
   "365d": {
-   "volume": 32910846701.0,
-   "fees": 53523861.0,
-   "revenue": 9355977.05,
-   "holders_revenue": 8008957.05
+   "volume": 32917718103.0,
+   "fees": 53874065.0,
+   "revenue": 9406491.05,
+   "holders_revenue": 8059471.05
   },
   "all_time": {
-   "volume": 37324522122.0,
-   "fees": 59752139.98,
-   "revenue": 9779188.05,
-   "holders_revenue": 8008957.05
+   "volume": 37437646850.0,
+   "fees": 60278285.98,
+   "revenue": 9829702.05,
+   "holders_revenue": 8059471.05
   }
  },
  "take_rates": {
   "7d": {
-   "fees_per_volume": 0.0012568199083935858,
-   "revenue_per_volume": 0.00041401551591791337,
-   "revenue_per_fees": 0.329415147829008,
+   "fees_per_volume": 0.0015976908481977658,
+   "revenue_per_volume": 0.00042967079237723945,
+   "revenue_per_fees": 0.2689323737830248,
    "buyback_per_revenue": 1.0
   },
   "30d": {
-   "fees_per_volume": 0.00145257348794002,
-   "revenue_per_volume": 0.0004830682335574406,
-   "revenue_per_fees": 0.33256027152368595,
+   "fees_per_volume": 0.0015495446078285448,
+   "revenue_per_volume": 0.0004832014124310387,
+   "revenue_per_fees": 0.3118344641321254,
    "buyback_per_revenue": 1.0
   },
   "90d": {
-   "fees_per_volume": 0.0015085371647494965,
-   "revenue_per_volume": 0.00041940448483933015,
-   "revenue_per_fees": 0.2780206511577561,
+   "fees_per_volume": 0.0015409700553542442,
+   "revenue_per_volume": 0.00042133217930721633,
+   "revenue_per_fees": 0.27342009524666516,
    "buyback_per_revenue": 1.0
   },
   "365d": {
-   "fees_per_volume": 0.0016263288965571848,
-   "revenue_per_volume": 0.0002842824779016007,
-   "revenue_per_fees": 0.1748001148497116,
-   "buyback_per_revenue": 0.8560257263563936
+   "fees_per_volume": 0.0016366281779140127,
+   "revenue_per_volume": 0.0002857576889311391,
+   "revenue_per_fees": 0.1746014719698616,
+   "buyback_per_revenue": 0.8567988857013795
   },
   "all_time": {
-   "fees_per_volume": 0.0016008815808730905,
-   "revenue_per_volume": 0.0002620043739082705,
-   "revenue_per_fees": 0.16366255757991685,
-   "buyback_per_revenue": 0.8189797567089426
+   "fees_per_volume": 0.0016100981512410413,
+   "revenue_per_volume": 0.0002625619630791512,
+   "revenue_per_fees": 0.16307202320353703,
+   "buyback_per_revenue": 0.8199100042915338
   }
  },
  "value_capture": {
-  "market_cap_usd": 4728207479.0,
+  "market_cap_usd": 4613252318.0,
   "circulating_supply_near": 1249836992.159308,
-  "annualized_volume_usd_from_30d": 45719073688.666664,
-  "annualized_fees_usd_from_30d": 66410314.333333336,
-  "annualized_revenue_usd_from_30d": 22085432.166666668,
-  "annualized_buyback_usd_from_30d": 22085432.166666668,
-  "buyback_yield_on_mcap": 0.004670994719406362,
-  "price_to_annualized_revenue": 214.08716131605695,
-  "annualized_volume_per_usd_mcap": 9.669430517109223,
+  "annualized_volume_usd_from_30d": 45398152341.833336,
+  "annualized_fees_usd_from_30d": 70346462.16666667,
+  "annualized_revenue_usd_from_30d": 21936451.333333332,
+  "annualized_buyback_usd_from_30d": 21936451.333333332,
+  "buyback_yield_on_mcap": 0.004755094631989156,
+  "price_to_annualized_revenue": 210.3007568498545,
+  "annualized_volume_per_usd_mcap": 9.840812774254447,
   "buyback_since": "2026-02-23",
-  "buyback_usd_since_start": 8008957.05,
-  "approx_near_bought_since_start": 3284273.75673458,
-  "approx_near_bought_pct_circulating": 0.002627761681993772,
+  "buyback_usd_since_start": 8059471.05,
+  "approx_near_bought_since_start": 3298360.902230285,
+  "approx_near_bought_pct_circulating": 0.00263903286822372,
   "note": "approx_near_bought assumes each day's buyback USD was spent at that day's price; DefiLlama reports USD, not tokens."
  },
  "relations": {
@@ -1139,29 +1139,29 @@
   {
    "token": "Hyperliquid",
    "gecko_id": "coingecko:hyperliquid",
-   "market_cap_usd": 17137426055.598179,
-   "holders_revenue_30d_usd": 68996936.0,
-   "annualized_holders_revenue_usd": 839462721.3333334,
-   "mcap_to_annual_buyback": 20.414755319186188,
-   "last_day": "2026-11-10"
+   "market_cap_usd": 17063637146.97622,
+   "holders_revenue_30d_usd": 68824519.0,
+   "annualized_holders_revenue_usd": 837364981.1666666,
+   "mcap_to_annual_buyback": 20.3777773500895,
+   "last_day": "2026-11-11"
   },
   {
    "token": "pump.fun",
    "gecko_id": "coingecko:pump-fun",
-   "market_cap_usd": 1605172100.8206522,
-   "holders_revenue_30d_usd": 22352024.0,
-   "annualized_holders_revenue_usd": 271949625.3333333,
-   "mcap_to_annual_buyback": 5.9024611593164185,
-   "last_day": "2026-11-10"
+   "market_cap_usd": 1579778876.0102665,
+   "holders_revenue_30d_usd": 21911106.0,
+   "annualized_holders_revenue_usd": 266585123.0,
+   "mcap_to_annual_buyback": 5.9259828839371,
+   "last_day": "2026-11-11"
   },
   {
    "token": "Jupiter",
    "gecko_id": "coingecko:jupiter-exchange-solana",
-   "market_cap_usd": 866594648.7289149,
-   "holders_revenue_30d_usd": 1648820.32,
-   "annualized_holders_revenue_usd": 20060647.22666667,
-   "mcap_to_annual_buyback": 43.198738252918794,
-   "last_day": "2026-11-10"
+   "market_cap_usd": 844092531.7264487,
+   "holders_revenue_30d_usd": 1592234.32,
+   "annualized_holders_revenue_usd": 19372184.22666667,
+   "mcap_to_annual_buyback": 43.57239854061051,
+   "last_day": "2026-11-11"
   }
  ],
  "weekly": [
@@ -2465,12 +2465,12 @@
   },
   {
    "month": "2026-11",
-   "days": 10,
-   "volume": 1313099238.0,
-   "fees": 1655880.0,
-   "revenue": 493660.0,
-   "holders_revenue": 493660.0,
-   "avg_price": 3.8723507040954965
+   "days": 11,
+   "volume": 1426223966.0,
+   "fees": 2182026.0,
+   "revenue": 544174.0,
+   "holders_revenue": 544174.0,
+   "avg_price": 3.846149367880452
   }
  ],
  "caveats": [
